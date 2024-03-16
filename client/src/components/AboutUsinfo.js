@@ -23,7 +23,7 @@ export default function AboutUsinfo() {
             data-aos="zoom-in"
             data-aos-delay="500"
             data-aos-duration="2000"
-            className="about"
+            className="about infobox"
           >
             <p>
               Salem Crown Apartments are fully remodeled with newly painted
@@ -64,7 +64,7 @@ export default function AboutUsinfo() {
             data-aos="zoom-in"
             data-aos-delay="900"
             data-aos-duration="2000"
-            className="about"
+            className="about infobox"
           >
             <p>
               Must have a <strong>minimum</strong> gross monthly family <strong>income</strong> of $2500
@@ -152,7 +152,7 @@ No pets over 25 lbs.
             data-aos-duration="1500"
             className="reviews-container"
           >
-            <div className="elfsight-app-b0b21a6b-fd53-4e3e-8341-31d8dddb7771 reviews"></div>
+            <div className="elfsight-app-b0b21a6b-fd53-4e3e-8341-31d8dddb7771 reviews infobox"></div>
           </div>
         </div>
 

@@ -966,7 +966,7 @@ button[type="submit"]:active {
 }
 
 .title {
-  color: #dfddf8;
+  color: #e4f8dd;
   font-weight: bold;
 }
 .available {
@@ -1063,6 +1063,26 @@ button[type="submit"]:active {
 
 
 /*About Us Page*/
+.infobox{
+  /* color:var(--dark-green-og); */
+  color: rgb(255, 255, 255);
+  font-size: 1.3em;
+  font-weight: 600;
+  border-radius: 15px;
+  background-color: rgba(193, 238, 197, 0.743);
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+  rgba(94, 87, 87, 0.3) 0px 18px 36px -18px inset; */
+
+
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.24);
+
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6px);
+-webkit-backdrop-filter: blur(6px);
+border: 1px solid rgba(255, 255, 255, 0.19);
+
+}
 .aboutUs-container{
   display: flex;
   flex-direction: column;
@@ -1079,16 +1099,6 @@ button[type="submit"]:active {
 .about{
   width:85%;
   padding:15px 10px 0px 10px;
-
-  color:var(--text-black);
-  font-size: larger;
-
-
-  border-radius: 15px;
-  background-color: rgba(196, 193, 238, .7);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-  rgba(94, 87, 87, 0.3) 0px 18px 36px -18px inset;
-
 }
 /*Reviews*/
 .reviews-container{
@@ -1101,15 +1111,15 @@ button[type="submit"]:active {
   /* margin-left: auto;
   margin-right:auto ; */
   display: flex;
-  color: var(--text-dark);
+  /* color: var(--text-dark); */
   border-radius: 15px;
   padding: 40px 10px 0 10px ;
-  background-color: rgba(196, 193, 238, .7);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-  rgba(94, 87, 87, 0.3) 0px 18px 36px -18px inset;
-width: 90%;
-
+  /* background-color: rgba(196, 193, 238, .7); */
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+  rgba(94, 87, 87, 0.3) 0px 18px 36px -18px inset; */
+  width: 90%;
 }
+
 /*Galery*/
 .container {
   width: 90%;
