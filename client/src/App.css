@@ -189,13 +189,13 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   .homePic-faded>.home-pic-text{
     /* height: fit-content; */
     position: absolute;
-    top: 18%;
+    top: 14%;
     left: 50%;
     transform: translate(-50%, 0%);
   }
   .homePic>.home-pic-text{
     position: absolute;
-    top: 18%;
+    top: 14%;
     left: 50%;
     transform: translate(-50%, 0%);
   }
@@ -533,7 +533,7 @@ position: absolute;
   border-radius: 5px;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
   object-fit: cover;
-  object-position: 28% 0;
+  object-position: 64% 0;
 }
 
 .homePic>.home-pic-text{
@@ -564,7 +564,7 @@ position: absolute;
   border-radius: 5px;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
   object-fit: cover;
-  object-position: 28% 0;
+  object-position: 64% 0;
 }
 
 .homePic-faded>.home-pic-text{
@@ -1276,8 +1276,12 @@ border: 1px solid rgba(255, 255, 255, 0.19);
 
 
 .map{
-  width:90%;
-  height:300px
+  width:100%;
+  height:500px
+}
+#map{
+  margin-bottom: -15vh;
+  margin-top: 10vh;
 }
 
 

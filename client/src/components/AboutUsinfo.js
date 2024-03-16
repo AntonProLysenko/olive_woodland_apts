@@ -167,11 +167,13 @@ No pets over 25 lbs.
             data-aos-duration="1500"
             className="virtual-tour"
 
-            src={`https://www.google.com/maps/embed/v1/streetview?location=39.7745%2C-84.2171&key=${process.env.REACT_APP_GOOGLE_KEY}`}
+            src="https://www.google.com/maps/embed?pb=!4v1710606854736!6m8!1m7!1sCAoSLEFGMVFpcE5ydkxPVFJCNkdEN29yd09PdVM5R0RYWUhSWWRNQ2ZiWFFIZ0VY!2m2!1d39.8092414!2d-84.218333!3f137.19804953607814!4f-1.5282579253473756!5f0.7820865974627469"
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
+
           ></iframe>
+            {/* <iframe  width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
 
          
         </div>
@@ -367,16 +369,18 @@ No pets over 25 lbs.
           </div>
 
           <iframe
+            id='map'
             title="maps about"
             data-aos="fade-up"
             data-aos-delay="300"
             data-aos-duration="1500"
             className="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3066.4376179754076!2d-84.2196212846235!3d39.77473347944482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884081c5961332e7%3A0xe38cbd36b306e837!2sSALEM%20CROWN%20APARTMENTS!5e0!3m2!1sen!2sus!4v1672364214381!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3064.899708498987!2d-84.218333!3d39.8092414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884081b53ea880a5%3A0xcc7c52c501f344ab!2sGREEN%20FOREST%20APARTMENTS!5e0!3m2!1sen!2sus!4v1710607180130!5m2!1sen!2sus"
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
+          
         </div>
 
         <FsLightbox
