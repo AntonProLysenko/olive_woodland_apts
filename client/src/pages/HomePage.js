@@ -53,11 +53,11 @@ export default function HomePage({ listings }) {
               <span> Directions:</span>
             </div>
             <a
-              href="https://www.google.com/maps/dir//1102+Salem+Ave,+Dayton,+OH+45406/@39.7746572,-84.2196603,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x88408122b505a61d:0xc35c5f962acf2cf5!2m2!1d-84.2174716!2d39.7746572"
+              href="https://www.google.com/maps/dir//GREEN+FOREST+APARTMENTS,+300-320+Forest+Park+Dr,+Dayton,+OH+45405/@39.8093879,-84.2187984,15z/data=!4m17!1m7!3m6!1s0x884081b53ea880a5:0xcc7c52c501f344ab!2sGREEN+FOREST+APARTMENTS!8m2!3d39.8091463!4d-84.2185168!16s%2Fg%2F11gr426pfx!4m8!1m0!1m5!1m1!1s0x884081b53ea880a5:0xcc7c52c501f344ab!2m2!1d-84.2185168!2d39.8091463!3e3?entry=ttu"
               target="_blank"
               rel="noreferrer"
             >
-              <span>1102 Salem Ave. Dayton, OH 45406</span>
+              <span>300-320 Forest Park Dr, Dayton, OH 45405</span>
             </a>
           </div>
 
