@@ -446,20 +446,20 @@ position: absolute;
 }
 
 .single-direction {
-  color: #e6e6f2f3;
+  color: #f6fff2f3;
   font-weight: bolder;
   font-size: large;
   height:8vh;
 }
 
 .single-direction > a {
-  color: rgb(243, 234, 218);
+  color: rgb(226, 255, 207);
   text-decoration: underline;
 }
 
 .directions {
 
-  color: #e6e6f2f3;
+  color: #f6fff2f3;
   font-weight: bolder;
   font-size: large;
   /* margin-right:auto;
@@ -468,7 +468,7 @@ position: absolute;
 }
 
 .directions > a {
-  color: rgb(243, 234, 218);
+  color: rgb(226, 255, 207);
   text-decoration: underline;
 }
 .ad-hidden{
