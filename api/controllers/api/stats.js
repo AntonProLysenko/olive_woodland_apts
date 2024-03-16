@@ -45,10 +45,11 @@ async function addStat(req, res){
 
 
 async function removeStat(req,res){
+  console.log("removeStat");
   try {
     // await Stat.create(req.body)
     await Stat.findOneAndUpdate({
-      _id: "65ce67076d2f7f56c1057959"
+      _id: "65f374432bceb21364bd1086"
       // _id: "65d4cbf67ee317d5ff4a7b1b"
     },{
       $pop:{
@@ -63,9 +64,11 @@ async function removeStat(req,res){
 
 async function indexStats(req,res){
   try {
+    console.log("indexStats");
+    
     // const stats = await Stat.find({})
     // const stats = await Stat.findOne({"_id": "65d4cbf67ee317d5ff4a7b1b"})//test collection
-    const stats = await Stat.findOne({"_id": "65ce67076d2f7f56c1057959"})
+    const stats = await Stat.findOne({"_id": "65f374432bceb21364bd1086"})
     res.status(200).json(stats);    
   } catch (error) {    
     res.status(400).json({ msg: error.message }); 
