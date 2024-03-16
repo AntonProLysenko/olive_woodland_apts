@@ -65,16 +65,11 @@ export default function ListingDetailsPage({ listings }) {
           <FsLightbox
             toggler={slide}
             sources={[
+              <iframe data-aos="zoom-in"
+              data-aos-delay="300"
+              data-aos-duration="1500" className="virtual-tour video" src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FGreenForestApts%2Fvideos%2F537745906753895%2F&show_text=false&width=560&t=2" width="560" height="314" style={{border:"none", overflow: "hidden"}} scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true">
+              </iframe>,
               listing.selectedFile1,
-              <iframe
-                src={`https://www.google.com/maps/embed/v1/streetview?location=39.7745%2C-84.2171&key=${process.env.REACT_APP_GOOGLE_KEY}`}
-                width="900"
-                height="550"
-                allowFullScreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>,
-            
               listing.selectedFile2,
               listing.selectedFile3,
               listing.selectedFile4,

@@ -172,11 +172,37 @@ No pets over 25 lbs.
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
 
-          ></iframe>
-            {/* <iframe  width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
-
-         
+          ></iframe>         
         </div>
+
+
+        {/* <div className="box-container">
+          <h1 data-aos="zoom-in" data-aos-duration="2000" className="title">
+            Video Tour
+          </h1>
+          {/* <iframe
+            title="virtual tour about"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+            data-aos-duration="1500"
+            className="virtual-tour"
+
+            src="https://www.google.com/maps/embed?pb=!4v1710606854736!6m8!1m7!1sCAoSLEFGMVFpcE5ydkxPVFJCNkdEN29yd09PdVM5R0RYWUhSWWRNQ2ZiWFFIZ0VY!2m2!1d39.8092414!2d-84.218333!3f137.19804953607814!4f-1.5282579253473756!5f0.7820865974627469"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>          
+
+        <iframe data-aos="zoom-in"
+            data-aos-delay="300"
+            data-aos-duration="1500" className="virtual-tour video" src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FGreenForestApts%2Fvideos%2F537745906753895%2F&show_text=false&width=560&t=2" width="560" height="314" style={{border:"none", overflow: "hidden"}} scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        </div> */}
+
+
+
+
+
+
         <div className="box-container">
           <div className="container">
             <h1 data-aos="zoom-in" data-aos-duration="100" className="title">
@@ -386,6 +412,9 @@ No pets over 25 lbs.
         <FsLightbox
           toggler={slide}
           sources={[
+            <iframe data-aos="zoom-in"
+            data-aos-delay="300"
+            data-aos-duration="1500"  src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FGreenForestApts%2Fvideos%2F537745906753895%2F&show_text=false&width=560&t=2" width="560" height="314" style={{border:"none", overflow: "hidden"}} scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>,
             "https://i.imgur.com/ILzD0HZ.jpg", // kitchen
             "https://i.imgur.com/QSntCVw.jpg", // kitchen
             "https://i.imgur.com/R16jAox.jpg", //bathroom
