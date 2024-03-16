@@ -152,7 +152,8 @@ No pets over 25 lbs.
             data-aos-duration="1500"
             className="reviews-container"
           >
-            <div className="elfsight-app-b0b21a6b-fd53-4e3e-8341-31d8dddb7771 reviews infobox"></div>
+            {/* <div className="elfsight-app-b0b21a6b-fd53-4e3e-8341-31d8dddb7771 reviews infobox"></div> */}
+            <div class="elfsight-app-b877d5ff-1807-4f95-a783-9fca9e121fee" data-elfsight-app-lazy></div>
           </div>
         </div>
 
