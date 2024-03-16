@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from "react"
-import FileBase64 from 'react-file-base64';
+import FileBase from 'react-file-base64';
 
 // import { Component.setState } from "react";
 
@@ -105,42 +105,42 @@ export default function EditListingpage (){
              
               <div className = "file-input-wrapper">
                 <label className="input-group-text" htmlFor="selectedFile1">Select Main Photo</label>
-                <FileBase64 type="file" className="fileBtn" id="selectedFile1" name = "selectedFile1" multiple={false} value = {listing.selectedFile1}  onDone={({ base64 }) => setListing({ ...listing, selectedFile1: base64 })} />
+                <FileBase type="file" className="fileBtn" id="selectedFile1" name = "selectedFile1" multiple={false} value = {listing.selectedFile1}  onDone={({ base64 }) => setListing({ ...listing, selectedFile1: base64 })} />
               </div>
 
               <div className = "file-input-wrapper">
                 <label className="input-group-text" htmlFor="selectedFile2">Select Second Photo</label>
-                <FileBase64 type="file" className="fileBtn" id = "selectedFile2" name = "selectedFile2" multiple={false} onDone={({ base64 }) => setListing({ ...listing, selectedFile2: base64 })} />
+                <FileBase type="file" className="fileBtn" id = "selectedFile2" name = "selectedFile2" multiple={false} onDone={({ base64 }) => setListing({ ...listing, selectedFile2: base64 })} />
               </div>
 
               <div className = "file-input-wrapper">
                 <label className="input-group-text" htmlFor="selectedFile3">Select Third Photo</label>
-                <FileBase64 type="file" className="fileBtn" id = "selectedFile3" name = "selectedFile3" multiple={false} onDone={({ base64 }) => setListing({ ...listing, selectedFile3: base64 })} />
+                <FileBase type="file" className="fileBtn" id = "selectedFile3" name = "selectedFile3" multiple={false} onDone={({ base64 }) => setListing({ ...listing, selectedFile3: base64 })} />
               </div>
 
               <div className = "file-input-wrapper">
                 <label className="input-group-text" htmlFor="selectedFile4">Select Fouth Photo</label>
-                <FileBase64 type="file" className="fileBtn" id = "selectedFile4" name = "selectedFile4" multiple={false} onDone={({ base64 }) => setListing({ ...listing, selectedFile4: base64 })} />
+                <FileBase type="file" className="fileBtn" id = "selectedFile4" name = "selectedFile4" multiple={false} onDone={({ base64 }) => setListing({ ...listing, selectedFile4: base64 })} />
               </div>
 
               <div className = "file-input-wrapper">
                 <label className="input-group-text" htmlFor="selectedFile5">Select Fifth Photo</label>
-                <FileBase64 type="file" className="fileBtn" id = "selectedFile5" name = "selectedFile5" multiple={false} onDone={({ base64 }) => setListing({ ...listing, selectedFile5: base64 })} />
+                <FileBase type="file" className="fileBtn" id = "selectedFile5" name = "selectedFile5" multiple={false} onDone={({ base64 }) => setListing({ ...listing, selectedFile5: base64 })} />
               </div>
 
               <div className = "file-input-wrapper">
                 <label className="input-group-text" htmlFor="selectedFile6">Select Sixth Photo</label>
-                <FileBase64 type="file" className="fileBtn" id = "selectedFile6" name = "selectedFile6" multiple={false} onDone={({ base64 }) => setListing({ ...listing, selectedFile6: base64 })} />
+                <FileBase type="file" className="fileBtn" id = "selectedFile6" name = "selectedFile6" multiple={false} onDone={({ base64 }) => setListing({ ...listing, selectedFile6: base64 })} />
               </div>
 
               <div className = "file-input-wrapper">
                 <label className="input-group-text" htmlFor="selectedFile7">Select Seventh Photo</label>
-                <FileBase64 type="file" className="fileBtn" id = "selectedFile7" name = "selectedFile7" multiple={false} onDone={({ base64 }) => setListing({ ...listing, selectedFile7: base64 })} />
+                <FileBase type="file" className="fileBtn" id = "selectedFile7" name = "selectedFile7" multiple={false} onDone={({ base64 }) => setListing({ ...listing, selectedFile7: base64 })} />
               </div>
 
               <div className = "file-input-wrapper">
                 <label className="input-group-text" htmlFor="selectedFile8">Select Eighth Photo</label>
-                <FileBase64 type="file" className="fileBtn" id = "selectedFile8" name = "selectedFile8" multiple={false} onDone={({ base64 }) => setListing({ ...listing, selectedFile8: base64 })} />
+                <FileBase type="file" className="fileBtn" id = "selectedFile8" name = "selectedFile8" multiple={false} onDone={({ base64 }) => setListing({ ...listing, selectedFile8: base64 })} />
               </div>
 
             </div>
