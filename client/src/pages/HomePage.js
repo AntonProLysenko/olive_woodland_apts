@@ -36,13 +36,13 @@ export default function HomePage({ listings }) {
 
       return (
         <div className="add-container">
-          <div className="ad">
+          <div className="ad infobox">
             <span>
               We have {availableListings.length} available apartments
               <br />
               <Link to="/available">
                 {" "}
-                <button className="btn-add">See more</button>
+                <button className="btn-add standart-button-dark">See more</button>
               </Link>
             </span>
           </div>

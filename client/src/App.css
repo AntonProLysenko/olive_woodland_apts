@@ -21,7 +21,7 @@
   --green-regular-og: rgb(43 143 32);
   --green-regular: #8bc34b;
   --dark-green-og: rgb(2 54 5);
-  --dark-green: #688941;
+  --dark-green: #4bc34b;
 }
  
 *,
@@ -354,16 +354,16 @@ position: absolute;
 
 .btn-add {
   color: white;
-  background-color: #5e3389;
   border: none;
   border-radius: 10px;
   height: 35px;
   width: 140px;
   font-size: large;
   font-weight: 600;
-
+  padding: 2px 10px;
   margin-top: 10px;
   white-space: nowrap;
+
   
 }
 
@@ -481,9 +481,9 @@ position: absolute;
 .ad {
   margin-right: auto;
   font-weight: bold;
-  color: var(--text-dark);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-    rgba(94, 87, 87, 0.3) 0px 18px 36px -18px inset;
+  /* color: var(--text-dark); */
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(94, 87, 87, 0.3) 0px 18px 36px -18px inset; */
 
   width: 25vmax;
 
@@ -491,7 +491,7 @@ position: absolute;
   padding: 10px;
   /* margin-right: 200px; */
 
-  background-color: rgba(196, 193, 238, .7);
+  /* background-color: rgba(196, 193, 238, .7); */
   animation: wiggle 3s linear infinite;
 }
 
@@ -522,13 +522,14 @@ position: absolute;
 }
 .homePic {
   position: relative;
+  width:100vw;
 }
 
 .homePic > img {
 
   filter: brightness(85%);
   height: 70vh;
-  width: 98vw;
+  width: 100%;
   border-radius: 5px;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
   object-fit: cover;
@@ -538,7 +539,7 @@ position: absolute;
 .homePic>.home-pic-text{
   /* height: 100px; */
   /* color: var(--green-regular); */
-  color: rgb(221, 246, 219);
+  color: rgb(255, 255, 255);
   font-weight: 850;
   width: 90%;
 }
@@ -554,12 +555,12 @@ position: absolute;
 
 .homePic-faded{
   position: relative;
-  
+  width: 100vw
 }
 .homePic-faded>img{
   filter: brightness(75%);
   height: 70vh;
-  width: 98vw;
+  width: 100%;
   border-radius: 5px;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
   object-fit: cover;
@@ -588,6 +589,23 @@ position: absolute;
 
 }
 .home-btn:hover{
+  background-color: var(--dark-green);
+}
+
+.standart-button{
+  color: white;
+  background-color: var(--green-regular);
+}
+
+.standart-button:hover{
+  background-color: var(--dark-green);
+}
+
+.standart-button-dark{
+  background-color: var(--green-regular-og);
+}
+
+.standart-button-dark:hover{
   background-color: var(--dark-green);
 }
 
@@ -966,7 +984,7 @@ button[type="submit"]:active {
 }
 
 .title {
-  color: #e4f8dd;
+  color: #fefefe;
   font-weight: bold;
 }
 .available {
@@ -1069,17 +1087,17 @@ button[type="submit"]:active {
   font-size: 1.3em;
   font-weight: 600;
   border-radius: 15px;
-  background-color: rgba(193, 238, 197, 0.743);
+  background-color: rgba(193, 238, 197, 0.362);
   /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
   rgba(94, 87, 87, 0.3) 0px 18px 36px -18px inset; */
 
 
-  /* From https://css.glass */
-background: rgba(255, 255, 255, 0.24);
 
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(6px);
--webkit-backdrop-filter: blur(6px);
+  /* background: rgba(255, 255, 255, 0.24); */
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 border: 1px solid rgba(255, 255, 255, 0.19);
 
 }
