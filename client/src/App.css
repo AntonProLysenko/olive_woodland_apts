@@ -265,7 +265,7 @@ ul {
 
 .navbar-brand,
 .navbar-text {
-  color: #07641a88;
+  color:var(--green-regular-og);
 }
 
 .navbar-text:hover,
