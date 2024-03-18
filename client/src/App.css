@@ -15,7 +15,7 @@
   --tan-4: #d3c1ae;
   --orange: #f67f00;
   --text-black: #253238;
-  --text-dark: #13640788;
+  --text-dark: #fffcfc;
   --title-light: #ddf8e1;
   --bg-green: rgb(215, 248, 215);
 
@@ -866,7 +866,7 @@ button[type="submit"]:active {
 }
 
 .price {
-  color: #598c58;
+  color: var(--text-dark);
 }
 .rent {
   color: var(--text-dark);
@@ -874,7 +874,7 @@ button[type="submit"]:active {
 }
 
 .lastUpdate {
-  color: rgb(233, 230, 230);
+  color: rgb(229 255 220);;
   /* align-self: flex-end; */
 }
 .forestLink{

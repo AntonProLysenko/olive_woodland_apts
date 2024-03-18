@@ -28,9 +28,10 @@ export default function AvailabilitiesPage({listings}) {
           return (
             <li  data-aos="zoom-in"data-aos-duration="1500" key={idx}>
               <Link to={`/available/${listing._id}`}>
-                <div className="listing-ad">
+
+                <div className="listing-ad infobox">
                   <div className="listing-ad-img">
-                    <img src={listing.selectedFile1} alt = "Salem Crown Apartment Interior" />
+                    <img src={listing.selectedFile1} alt = "Green Forest Apartment Interior" />
                   </div>
 
                   <div className="listing-title">
