@@ -64,6 +64,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   .emailUs-form{
     width:50%
   }
+
    .info, .quals>div{
     width:70%
   }
@@ -414,6 +415,52 @@ position: absolute;
 
 
 
+.home-btn{
+  margin: 10px;
+  padding: 7px;
+  display:inline-block;
+  white-space: nowrap;
+  color: white;
+  background-color: var(--green-regular);
+  border: none;
+  border-radius: 10px;
+  height: fit-content;
+  width: fit-content;
+  font-size: large;
+  font-weight: 600;
+
+}
+.home-btn:hover{
+  background-color: var(--dark-green);
+}
+
+.standart-button{
+  color: white;
+  background-color: var(--green-regular);
+}
+
+.standart-button:hover{
+  background-color: var(--dark-green);
+}
+
+.standart-button-dark{
+  background-color: var(--green-regular-og);
+}
+
+.standart-button-dark:hover{
+  background-color: var(--dark-green);
+}
+
+.standart-button-black{
+  background-color: #253238;
+  border-radius: 2px;
+  /* padding: 0px 20px 0px; */
+
+}
+
+
+
+
 
 
 
@@ -575,41 +622,6 @@ position: absolute;
   width: 90%
 }
 
-.home-btn{
-  margin: 10px;
-  padding: 7px;
-  display:inline-block;
-  white-space: nowrap;
-  color: white;
-  background-color: var(--green-regular);
-  border: none;
-  border-radius: 10px;
-  height: fit-content;
-  width: fit-content;
-  font-size: large;
-  font-weight: 600;
-
-}
-.home-btn:hover{
-  background-color: var(--dark-green);
-}
-
-.standart-button{
-  color: white;
-  background-color: var(--green-regular);
-}
-
-.standart-button:hover{
-  background-color: var(--dark-green);
-}
-
-.standart-button-dark{
-  background-color: var(--green-regular-og);
-}
-
-.standart-button-dark:hover{
-  background-color: var(--dark-green);
-}
 
 
 
@@ -734,7 +746,7 @@ button[type="submit"] {
   border: none;
   border-radius: 3px;
 
-  background-color: #9277d0;
+  background-color: var(--green-regular-og);
   color: white;
   font-size: large;
   font-weight: 600;
@@ -742,6 +754,8 @@ button[type="submit"] {
   white-space: nowrap;
   height: fit-content;
   width: fit-content;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .photos {
@@ -783,11 +797,11 @@ input[type="file"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #dd7dbe;
+  background-color: var(--dark-green);
 }
 
 button[type="submit"]:active {
-  background-color: #d5afc9;
+  background-color: var(--dark-green-og);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
@@ -1337,28 +1351,57 @@ border: 1px solid rgba(255, 255, 255, 0.19);
 .emailUs-form{
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 
   /* width: 50%; */
-  background-color: var(--white);
+  /* background-color: var(--white); */
   border-radius: 1vmin;
   padding:20px;
   margin-bottom: 50px;
   margin-top: 0px;
 }
 
+.emailUs-form>label{
+  font-size: larger;
+  /* filter: drop-shadow(1px 1px 10px rgb(0, 0, 0)); */
+  color: white;
+  align-self: flex-start;
+}
+
 .emailUs-form>input{
-  width:90%;
+  align-self: flex-start;
+  width:99%;
   /* align-self:flex-start; */
-  margin-bottom: 10px;
+  color: white;
+  font-size: large;
+  outline: none;
+  margin-bottom: 15px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgb(196, 221, 185);
+}
+.emailUs-form>input:focus{
+  border-bottom: 2px solid rgb(255, 255, 255);
 }
 
 .emailUs-form>textarea{
-  width:90%;
-  margin-bottom: 10px;
-  align-self: center;
+  line-height: 20px;
+  height: 55px;
+  width:99%;
+  outline: none;
+  color: white;
+  font-size: large;
+  margin-bottom: 15px;
+  /* align-self: center; */
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(196, 221, 185);
 }
 
-
+.emailUs-form>textarea:focus{
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
 
 
 
@@ -1725,7 +1768,18 @@ input:checked + .slider:before {
 
 @media (orientation:portrait){
    .emailUs-form{
-    width:80%
+    width:80%;
+    height: 40vh
+  }
+  .responce-email{
+    width:80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40vh
+  }
+  .contactUs-img>img{
+    width: 90vw
   }
   .info, .quals>div{
     width:90%

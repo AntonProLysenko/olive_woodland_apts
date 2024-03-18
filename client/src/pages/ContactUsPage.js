@@ -14,6 +14,9 @@ export default function ContactUs() {
   const [isSent, setisSent] = useState(false);
 
   const onSubmit = (e) => {
+
+    console.log(process.env.REACT_APP_SERVICE_ID,  process.env.REACT_APP_TEMPLATE_ID,process.env.REACT_APP_PUBLIC_KEY,);
+    
     e.preventDefault();    
     send(
       process.env.REACT_APP_SERVICE_ID, 
@@ -42,7 +45,7 @@ export default function ContactUs() {
 
   return (
     <>
-      <h1  data-aos="zoom-in"data-aos-duration="1500" className='title'>Contact Salem Crown Apartments</h1>
+      <h1  data-aos="zoom-in"data-aos-duration="1500" className='title contactUs-title'>Contact GreenForest Apartments</h1>
       <div className='contactUs-page'>
     
         <div  data-aos="fade-right"data-aos-duration="2000"data-aos-delay="600"className='contactUs-img'>
@@ -58,7 +61,7 @@ export default function ContactUs() {
         <h1  data-aos="zoom-in"data-aos-duration="1500" className='title'>Apply Online</h1>
         <p className='text center'>Online applications can be submitted 24/7.</p>
         <a href="https://day.managebuilding.com/Resident/rental-application/new" target="_blank" rel="noreferrer">
-          <button className="create-btn">
+          <button className="create-btn standart-button-black">
             <i className="fa fa-pencil" aria-hidden="true"></i>
             &nbsp; Apply Now</button>
         </a>
@@ -68,37 +71,40 @@ export default function ContactUs() {
       <h1  data-aos="zoom-in"data-aos-duration="2000"data-aos-delay="700"className={isSent? "hidden":"title"}>Email Us</h1>
 
       <div data-aos="fade-up"data-aos-duration="2000"data-aos-delay="700" className='email-container'>
+        <div className={isSent? "shown responce-email":"hidden"}>
+        <h3 className='title'>Thank you for contacting Green Forest Apartments!</h3>
+        <h3 className="title"> We'll email you shortly</h3>
+        </div>
 
-        <h3 className={isSent? "shown title":"hidden"}>Thank you for contacting Salem Crown Apartments!</h3>
-        <h3 className={isSent? "shown title":"hidden"}> We'll email you shortly</h3>
-
-        <form className={isSent? "hidden":"emailUs-form"} onSubmit={onSubmit}>
+        <form className={isSent? "hidden":"emailUs-form infobox"} onSubmit={onSubmit}>
+        <label>Your Name:</label>
          <input
             type='text'
             name='from_name'
-            placeholder='Enter Your Name'
+            // placeholder='Enter Your Name'
             required
             value={toSend.from_name}
             onChange={handleChange}
           />
-      
+          <label>Your Message:</label>
           <textarea className = "description"
             type='text'
             name='message'
             required
-            placeholder='Enter Your message'
+            // placeholder='Enter Your message'
             value={toSend.message}
             onChange={handleChange}
           />
+          <label>Your Email:</label>
           <input
             type='email'
             name='reply_to'
             required
-            placeholder='Enter Your email'
+            // placeholder='Enter Your email'
             value={toSend.reply_to}
             onChange={handleChange}
           />
-            <button type='submit'>
+            <button type='submit' className='standart-button'>
             <i className="fa fa-envelope" aria-hidden="true"></i>
               &nbsp; Send</button>
         </form>
