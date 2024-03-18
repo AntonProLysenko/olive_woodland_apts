@@ -17,6 +17,7 @@
   --text-black: #3d3d3d;
   --text-dark: #13640788;
   --title-light: #ddf8e1;
+  --bg-green: rgb(215, 248, 215);
 
   --green-regular-og: rgb(43 143 32);
   --green-regular: #8bc34b;
@@ -247,7 +248,7 @@ ul {
 
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  background-color: rgb(204, 228, 206);
+  background-color:var(--bg-green)
 }
 
 .nav-links {
@@ -269,7 +270,7 @@ ul {
 
 .navbar-text:hover,
 .navbar-brand:hover {
-  color: whitesmoke;
+  color: white;
 }
 
 .brand-img {
@@ -280,7 +281,7 @@ ul {
 
 /*Footer*/
 .footer{
-  color: rgb(231, 207, 164);
+  color: var(--dark-green);
   
   margin-top:auto;
   width: 100%;
@@ -288,12 +289,12 @@ ul {
 
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
   rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  background-color: rgba(192, 213, 193, 0.3);
+  background-color:var(--bg-green)
   
 }
 
 .footer>a{
-  color:rgb(228, 248, 238);
+  color:rgb(250, 199, 58);
   text-decoration: underline;
   font-weight: 500;
 }
@@ -305,7 +306,8 @@ ul {
 }
 
 .social>i{
-  color: white;
+  color:white;
+  font-size: larger;
 }
 .error{
 position: absolute;
