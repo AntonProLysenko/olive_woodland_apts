@@ -179,7 +179,7 @@ console.log(sortedVisitors, "Sortet Vis");
           return(
             <li key = {idx}>
                   <Link to= {`/irunthis/${listing._id}`}>
-                    <div className='listing-ad'>
+                    <div className='listing-ad infobox'>
 
                       <div className='listing-ad-img'>
                         <img src = {listing.selectedFile1}/>
@@ -274,7 +274,7 @@ console.log(sortedVisitors, "Sortet Vis");
     <>  
  
       <h1 className='title'>Listings</h1> 
-      <Link to = "/irunthis/new"><button className='create-btn'>Create new</button></Link>
+      <Link to = "/irunthis/new"><button className='create-btn standart-button-black'>Create new</button></Link>
       
       {listings&&visitors.length!=0? loaded():loading()}
     </>

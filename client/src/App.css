@@ -698,12 +698,12 @@ form {
 
 legend {
   font-weight: bold;
-  color: #0a076488;
+  color: var(--text-dark);
 }
 
 label {
   font-size: 2vmin;
-  color: #0a076488;
+  color: var(--text-dark);
 
   display: flex;
   align-self: center;
@@ -714,7 +714,7 @@ input {
   font-size: 2vmin;
   border: 1px solid var(--tan-3);
   border-radius: 3px;
-  color: var(--text-dark);
+  color: var(--text-black);
   background-image: none !important; /* prevent lastpass */
   outline: none;
   display: flex;
@@ -732,7 +732,7 @@ textarea {
 
   border: 0.1px solid var(--tan-3);
   border-radius: 3px;
-  color: var(--text-dark);
+  color: var(--text-black);
   background-image: none !important; /* prevent lastpass */
   outline: none;
 }

@@ -112,8 +112,8 @@ export default function ListingDetailsPage({ listings }) {
         </div>
 
         <div className="quals">
-          <h2>Qualifications:</h2>
-          <div>
+          <h2 className="title">Qualifications:</h2>
+          <div className="infobox">
             <ul className="quals-list">
             {quals.map((pa, idx) => {
               return <li key={idx}>{pa}</li>;

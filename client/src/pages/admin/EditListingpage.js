@@ -43,7 +43,7 @@ export default function EditListingpage (){
     return(
         <>
             <form  autoComplete="off" onSubmit={handleUpdate}>
-            <div className = " create-form, form-container">
+            <div className = " create-form, form-container infobox">
           <legend>Edit Listing</legend>
          
          <div className='form-title'>

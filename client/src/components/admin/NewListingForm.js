@@ -61,7 +61,7 @@ export default function NewListingForm  (){
         <form  onSubmit={handleSubmit}>
 
 
-          <div className = " create-form, form-container">
+          <div className = " create-form, form-container infobox">
               <legend>Create New Listing</legend>
             
             <div className='form-title'>

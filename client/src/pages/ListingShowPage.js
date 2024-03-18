@@ -75,10 +75,13 @@ export default function ListingShowPage() {
             toggler={slide}
             sources={[
               listing.selectedFile1,
-              <iframe
-                src={`https://www.google.com/maps/embed/v1/streetview?location=39.7745%2C-84.2171&key=${process.env.REACT_APP_GOOGLE_KEY}`}
-                width="900"
-                height="550"
+              <iframe 
+              src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FGreenForestApts%2Fvideos%2F537745906753895%2F&show_text=false&width=560&t=2" 
+              width="1100" height="650" style={{border:"none", overflow: "hidden"}} scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>,
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!4v1710606854736!6m8!1m7!1sCAoSLEFGMVFpcE5ydkxPVFJCNkdEN29yd09PdVM5R0RYWUhSWWRNQ2ZiWFFIZ0VY!2m2!1d39.8092414!2d-84.218333!3f137.19804953607814!4f-1.5282579253473756!5f0.7820865974627469"
+                width="1100"
+                height="650"
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
