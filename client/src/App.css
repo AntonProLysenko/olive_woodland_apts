@@ -14,7 +14,7 @@
   --tan-3: #e2d9d1;
   --tan-4: #d3c1ae;
   --orange: #f67f00;
-  --text-black: #3d3d3d;
+  --text-black: #253238;
   --text-dark: #13640788;
   --title-light: #ddf8e1;
   --bg-green: rgb(215, 248, 215);
@@ -50,6 +50,12 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   height: 100vh;
 }
 
+a:hover{
+  cursor: pointer;
+  color: var(--green-regular)
+}
+
+
 
   @media (orientation: landscape) {
   .home-pic-text{
@@ -63,6 +69,9 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
   .emailUs-form{
     width:50%
+  }
+  .contactUs-title{
+    margin: 2vh 0 5vh 0;
   }
 
    .info, .quals>div{
@@ -227,6 +236,7 @@ ul {
 }
 .text{
   font-size: larger;
+  font-weight: 400;
   color:var(--text-black);
   text-align: left;
 }
@@ -435,15 +445,18 @@ position: absolute;
 }
 
 .standart-button{
+  cursor: pointer;
   color: white;
   background-color: var(--green-regular);
 }
 
 .standart-button:hover{
+
   background-color: var(--dark-green);
 }
 
 .standart-button-dark{
+  cursor: pointer;
   background-color: var(--green-regular-og);
 }
 
@@ -452,6 +465,7 @@ position: absolute;
 }
 
 .standart-button-black{
+  cursor: pointer;
   background-color: #253238;
   border-radius: 2px;
   /* padding: 0px 20px 0px; */
@@ -499,11 +513,13 @@ position: absolute;
   font-weight: bolder;
   font-size: large;
   height:8vh;
+  cursor: pointer;
 }
 
 .single-direction > a {
-  color: rgb(226, 255, 207);
+  color: rgb(255, 255, 255);
   text-decoration: underline;
+  
 }
 
 .directions {
