@@ -342,10 +342,10 @@ position: absolute;
 /*BUTTONS*/
 .create-btn {
   margin: 10px;
-  color: white;
-  background-color: #5e3389;
+  color: var(--text-black);
+  background-color: #ffffff;
   border: none;
-  border-radius: 10px;
+  border-radius: 3px;
   height: 50px;
   width: 140px;
   font-size: large;
@@ -356,11 +356,18 @@ position: absolute;
 }
 
 .create-btn:hover {
-  background-color: #337c89;
+  background-color: #e5e5e5;
+}
+.create-btn:active {
+  color: black;
+  background-color: #c0c0c0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
+
 .create-btn:active {
-  background-color: #337c89;
+  background-color: #d5d5d5;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
@@ -400,11 +407,6 @@ position: absolute;
   background-color: #932d2d;
 }
 
-.create-btn:active {
-  background-color: #932d2d;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-}
 
 .btn-add {
   color: white;
@@ -465,11 +467,19 @@ position: absolute;
 }
 
 .standart-button-black{
+  color: white;
   cursor: pointer;
   background-color: #253238;
   border-radius: 2px;
   /* padding: 0px 20px 0px; */
+}
+.standart-button-black:hover{
+  background-color: #172329;
+}
 
+.standart-button-black:active{
+  color: greenyellow;
+  background-color: #101b20;
 }
 
 
@@ -1035,7 +1045,7 @@ button[type="submit"]:active {
   align-items: center;
 
   margin-top: 20px;
-  color: #dfddf8;
+
   text-align: center;
 }
 
@@ -1046,9 +1056,9 @@ button[type="submit"]:active {
 
 .quals > div {
   padding: 30px 10px;
-  color: var(--text-black);
+  color: var(--text-dark);
   font-weight: 500;
-  background-color: rgba(196, 193, 238, .7);
+
   border-radius: 10px;
   /* width: 70%; */
 }
@@ -1061,7 +1071,7 @@ button[type="submit"]:active {
 
 }
 .quals-list>li{
-  color: var(--text-black);
+  color: var(--text-dark);
   margin-top: 5px;
 }
 

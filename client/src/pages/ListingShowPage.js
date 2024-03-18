@@ -95,7 +95,7 @@ export default function ListingShowPage() {
             ]}
           />
 
-          <div className="info info-box">
+          <div className="info info-box infobox">
             <h3 className="info-title">
               Rent: <span className="price">{listing.rent}</span>
             </h3>
@@ -129,7 +129,7 @@ export default function ListingShowPage() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <button className="create-btn">
+                <button className="standart-button-black create-btn ">
                   <i className="fa fa-envelope" aria-hidden="true"></i>
                   &nbsp; Email Us
                 </button>
@@ -139,8 +139,8 @@ export default function ListingShowPage() {
         </div>
 
         <div className="quals info-box">
-          <h2>Qualifications:</h2>
-          <div data-aos="fade-up" data-aos-duration="200">
+          <h2 className="title">Qualifications:</h2>
+          <div className="infobox" data-aos="fade-up" data-aos-duration="200">
             <ul className="quals-list">
 
             {quals.map((pa, idx) => {
@@ -152,7 +152,7 @@ export default function ListingShowPage() {
               target="_blank"
               rel="noreferrer"
             >
-              <button className="create-btn">
+              <button className="create-btn standart-button-black">
                 <i className="fa fa-pencil" aria-hidden="true"></i>
                 &nbsp; Apply Now
               </button>

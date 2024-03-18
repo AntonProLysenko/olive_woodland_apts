@@ -81,7 +81,7 @@ export default function ListingDetailsPage({ listings }) {
             ]}
           />
 
-          <div className="info">
+          <div className="info infobox">
             {listing.available ? (
               <h5 className="available">Available</h5>
             ) : (
