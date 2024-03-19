@@ -31,7 +31,7 @@ const [filterOptions, setfilterOptions] = useState({
 });
 
 function createSetOfDates(){   
-  if (visitors.length != 0) {
+  if (visitors.length !== 0) {
     let years = []
     sortedVisitors.forEach((visitor)=>{      
       years.push(visitor[1].year)
@@ -92,7 +92,7 @@ function createSetOfDates(){
 function sortVisitors(){
   let sorted = visitors
 
-  if (filterOptions.year !== 'all years'){
+  if (filterOptions.year === 'all years'){
     sorted = visitors.filter((visitor)=>{
       if (visitor[1].year === parseInt(filterOptions.year)){
         return visitor
@@ -146,11 +146,11 @@ useEffect(()=>{
 
 
 
-console.log(listings, "Listings");
+// console.log(listings, "Listings");
 
-console.log(visitors, "visitors");
+// console.log(visitors, "visitors");
 
-console.log(sortedVisitors, "Sortet Vis");
+// console.log(sortedVisitors, "Sortet Vis");
 
 
   function loaded (){
@@ -182,7 +182,7 @@ console.log(sortedVisitors, "Sortet Vis");
                     <div className='listing-ad infobox'>
 
                       <div className='listing-ad-img'>
-                        <img src = {listing.selectedFile1}/>
+                        <img src = {listing.selectedFile1} alt='listing-ad-img'/>
                       </div>
 
         
@@ -276,7 +276,7 @@ console.log(sortedVisitors, "Sortet Vis");
       <h1 className='title'>Listings</h1> 
       <Link to = "/irunthis/new"><button className='create-btn standart-button-black'>Create new</button></Link>
       
-      {listings&&visitors.length!=0? loaded():loading()}
+      {listings&&visitors.length!==0? loaded():loading()}
     </>
   )
 }

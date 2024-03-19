@@ -24,7 +24,6 @@ export default function HomePage({ listings }) {
 
     listings.map((listing) => {
       if (listing.available === true) {
-        // console.log(listing)
         return availableListings.push(listing);
       }
       return null

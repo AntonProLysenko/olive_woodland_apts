@@ -31,12 +31,10 @@ export function update(listingData, id) {
 
 
 export function addStat(stat){
-  console.log("addStats", stat);
   return sendRequest(`${STAT_URL}/new`, 'PUT', stat)
 }
 
 export function getStats(){
-  console.log("getStats");
   return sendRequest(`${STAT_URL}/read`, 'GET');
 }
 

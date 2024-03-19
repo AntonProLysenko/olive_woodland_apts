@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { signUp } from '../../utilities/users-service';
-import { Link, useNavigate } from "react-router-dom";
+// import { Link, useNavigate } from "react-router-dom";
 import {removeStat} from '../../utilities/listings-service'
 export default class SignUpForm extends Component {
   state = {
@@ -45,7 +45,6 @@ export default class SignUpForm extends Component {
 
   render() {
 
-    console.log(this.props);
     
     const disable = this.state.password !== this.state.confirm;
     return (
