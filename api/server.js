@@ -1,6 +1,12 @@
 const express = require('express');
 const path = require('path');
 const bodyParser= require ("body-parser");//alow to enable to sen POST req
+const cors=require("cors");//cors is a cross origin resource sharing  alows to use back end with a different url from front-end
+const corsOptions ={
+  origin:'*', 
+  credentials:true,            //access-control-allow-credentials:true
+  optionSuccessStatus:200,
+}
 
 
 // const favicon = require('serve-favicon');
@@ -15,7 +21,7 @@ const app = express();
 
 app.use(bodyParser.json({ limit: '100mb', extended: true }))   //setting the limin for uploading images no more than 10 mb
 app.use(bodyParser.urlencoded({ limin: "10mb", extended: true}))
-// app.use(cors())
+app.use(cors(corsOptions))
 
 // app.use(logger('dev'));
 app.use(express.json());
