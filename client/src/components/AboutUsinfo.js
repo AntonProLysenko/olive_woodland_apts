@@ -77,7 +77,7 @@ export default function AboutUsinfo() {
             data-aos-duration="1000"
             className="title"
           >
-            Our Main Creteria
+            Our Main Criteria
           </h1>
           <div
             data-aos="zoom-in"
@@ -86,7 +86,7 @@ export default function AboutUsinfo() {
             className="about infobox"
           >
             <p>
-              Must have a <strong>minimum</strong> gross monthly family <strong>income</strong> of $2500
+              Must have a <strong>minimum</strong> gross monthly family <strong>income</strong> of $2000
             </p>
 <p>
 No evictions, eviction filings, or criminal convictions in the past 5 years (including theft, domestic violence, drug charges, and any felony charges).

@@ -45,14 +45,14 @@ export default function ContactUs() {
 
   return (
     <>
-      <h1  data-aos="zoom-in"data-aos-duration="1500" className='title contactUs-title'>Contact GreenForest Apartments</h1>
+      <h1 className='title contactUs-title' data-aos="zoom-in"data-aos-duration="1500" >Contact GreenForest Apartments</h1>
       <div className='contactUs-page'>
     
-        <div  data-aos="fade-right"data-aos-duration="2000"data-aos-delay="600"className='contactUs-img'>
+        <div className='contactUs-img' data-aos="fade-right"data-aos-duration="2000"data-aos-delay="600">
           <img  src={mailboxes_img} alt = "Green Forest Apartments mailboxes" />
         </div>
 
-        <div  data-aos="fade-left"data-aos-duration="2000"data-aos-delay="400" className='contactUs-text'>
+        <div className='contactUs-text'  data-aos="fade-left"data-aos-duration="2000"data-aos-delay="400">
         <p className='text'>Thank you for inquiring about our apartments for rent in Dayton. Feel free to contact us with any further questions and we will be happy to assist you.</p>
         <address className='text single-direction'><span className='text'>Address:</span> <a target="_blank" href='https://www.google.com/maps/dir//GREEN+FOREST+APARTMENTS,+300-320+Forest+Park+Dr,+Dayton,+OH+45405/@39.8093879,-84.2187984,15z/data=!4m17!1m7!3m6!1s0x884081b53ea880a5:0xcc7c52c501f344ab!2sGREEN+FOREST+APARTMENTS!8m2!3d39.8091463!4d-84.2185168!16s%2Fg%2F11gr426pfx!4m8!1m0!1m5!1m1!1s0x884081b53ea880a5:0xcc7c52c501f344ab!2m2!1d-84.2185168!2d39.8091463!3e3?entry=ttu'> 300-320 Forest Park Dr, Dayton, OH 45405</a> </address>
 
@@ -70,7 +70,9 @@ export default function ContactUs() {
 
       <h1  data-aos="zoom-in"data-aos-duration="2000"data-aos-delay="700"className={isSent? "hidden":"title"}>Email Us</h1>
 
-      <div data-aos="fade-up"data-aos-duration="2000"data-aos-delay="700" className='email-container'>
+      <div className='email-container'
+       data-aos="fade-right"data-aos-duration="2000"data-aos-delay="700" 
+       >
         <div className={isSent? "shown responce-email":"hidden"}>
         <h3 className='title'>Thank you for contacting Green Forest Apartments!</h3>
         <h3 className="title"> We'll email you shortly</h3>
