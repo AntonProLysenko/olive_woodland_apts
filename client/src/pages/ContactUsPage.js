@@ -66,7 +66,7 @@ export default function ContactUs() {
         </div>
       </div>
 
-      <h1  data-aos="zoom-in"data-aos-duration="2000"data-aos-delay="700"className={isSent? "hidden":"title"}>Email Us</h1>
+      <h1  data-aos="zoom-in"data-aos-duration="500"data-aos-delay="100"className={isSent? "hidden":"title"}>Email Us</h1>
 
       <div className='email-container'
        data-aos="fade-right"data-aos-duration="2000"data-aos-delay="700" 
