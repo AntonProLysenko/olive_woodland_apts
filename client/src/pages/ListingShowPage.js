@@ -9,6 +9,8 @@ import loading from "../components/loading";
 
 import Footer from "../components/Footer";
 
+import floorPlan from "../assets/apatrment/floor_plan.png"
+
 
 
 
@@ -77,7 +79,8 @@ export default function ListingShowPage() {
               listing.selectedFile1,
               <iframe 
               src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FGreenForestApts%2Fvideos%2F537745906753895%2F&show_text=false&width=560&t=2" 
-              width="1100" height="650" style={{border:"none", overflow: "hidden"}} scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>,
+              width="1100" height="650" style={{border:"none", overflow: "hidden"}} scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true">
+              </iframe>,
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!4v1710606854736!6m8!1m7!1sCAoSLEFGMVFpcE5ydkxPVFJCNkdEN29yd09PdVM5R0RYWUhSWWRNQ2ZiWFFIZ0VY!2m2!1d39.8092414!2d-84.218333!3f137.19804953607814!4f-1.5282579253473756!5f0.7820865974627469"
                 width="1100"
@@ -94,7 +97,7 @@ export default function ListingShowPage() {
               listing.selectedFile6,
               listing.selectedFile7,
               listing.selectedFile8,
-              "https://i.imgur.com/CwSBvsh.jpg", //floor plan
+              floorPlan, //floor plan
             ]}
           />
 
