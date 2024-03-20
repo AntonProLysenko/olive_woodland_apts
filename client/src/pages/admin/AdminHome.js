@@ -31,8 +31,11 @@ const [filterOptions, setfilterOptions] = useState({
 });
 
 function createSetOfDates(){   
-  if (visitors.length !== 0) {
+  // if (visitors.length !== 0) {
     let years = []
+
+    console.log(sortedVisitors, "SORTED VISITORS INSIDE CREATE FUNCTION");
+    
     sortedVisitors.forEach((visitor)=>{      
       years.push(visitor[1].year)
     })
@@ -77,7 +80,9 @@ function createSetOfDates(){
       years: availableYears,
       cities: availabileCities
     }
-  }
+  // }else{
+  //   createSetOfDates()
+  // }
 }
 
 
@@ -90,9 +95,15 @@ function createSetOfDates(){
 
 
 function sortVisitors(){
+
+  console.log("sortVisitors");
+  
   let sorted = visitors
 
-  if (filterOptions.year === 'all years'){
+  console.log(sorted);
+  
+
+  if (filterOptions.year !== 'all years'){
     sorted = visitors.filter((visitor)=>{
       if (visitor[1].year === parseInt(filterOptions.year)){
         return visitor
@@ -146,12 +157,6 @@ useEffect(()=>{
 
 
 
-// console.log(listings, "Listings");
-
-// console.log(visitors, "visitors");
-
-// console.log(sortedVisitors, "Sortet Vis");
-
 
   function loaded (){
     //sorting, available listing goes first
@@ -165,7 +170,7 @@ useEffect(()=>{
     })
 
     //getting set of available dates
-    let availabileDates = createSetOfDates();
+    let availabileDates = createSetOfDates();   
         
     return(
       <>
