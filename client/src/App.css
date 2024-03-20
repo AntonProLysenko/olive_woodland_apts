@@ -892,10 +892,16 @@ button[type="submit"]:active {
   /* align-self: flex-end; */
 }
 .forestLink{
-  color:rgb(24, 106, 24);
+  color:rgb(122 124 202);
   text-decoration: underline;
 }
-
+.forestLink:hover{
+  font-size: larger;
+  color:rgb(255, 255, 255)
+}
+.forestLink:active{
+  color:rgb(101, 102, 175);
+}
 
 .visitors_sorting_form{
   width:50%;
