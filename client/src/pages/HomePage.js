@@ -167,9 +167,8 @@ export default function HomePage({ listings }) {
             <h1 className="title-main">Green Forest Apartments</h1>
             <br />
             <p>
-              Fully remodeled One Bedroom Apartments in Dayton, OH with luxury vinyl plank
-              floors, and newer appliances that consist of a stove, fridge and
-              dishwasher.
+            Fully remodeled one-bedroom apartments in Dayton, OH with newly painted walls,
+            a remodeled bathroom and kitchen, luxury vinyl plank floors, and newer appliances that consist of a stove and fridge. 
             </p>
 
             <Link to="/about">
