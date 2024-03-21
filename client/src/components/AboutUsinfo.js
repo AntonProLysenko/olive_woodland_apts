@@ -45,10 +45,10 @@ export default function AboutUsinfo() {
             className="about infobox"
           >
             <p>
-              Green Forest Apartments are fully remodeled with newly painted
-              walls, remodeled bathroom and kitchen, luxury vinyl plank floors,
-              and newer appliances that consist of a stove, fridge and
-              dishwasher.{" "}
+              Green Forest Apartments are fully remodeled with newly painted walls, a remodeled bathroom and kitchen,
+              luxury vinyl plank floors, and newer appliances that consist of a stove and fridge. 
+              The features inside this apartment are above the rest! 
+              New AC, new windows and doors, walk-in closet, 24-hour laundry area, secure entrances. 
             </p>
             {/* <p>
               The features inside this apartment are above the rest! Individual
@@ -56,11 +56,17 @@ export default function AboutUsinfo() {
               secure entrances.{" "}
             </p> */}
             <p>
-              Conveniently located 3 miles downtown Dayton, and close to Kroger
-              (2 miles).
+              Conveniently located 4 miles downtown Dayton, and close to Kroger (1.5 miles) and Police Department (2 miles). 
             </p>
             <p>
               <strong>RTA stop right on the corner</strong>{" "}
+            </p>
+            <p>
+              <ul>
+              Lovely parks nearby:
+                <li>Sinclair Park - 0.3 mil</li>
+                <li>Wegerzyn Gardens Metro Park - 2 mil</li>
+              </ul>
             </p>
             <p>
               We strive to provide nice, clean, fully remodeled, comfortable, and affordable
