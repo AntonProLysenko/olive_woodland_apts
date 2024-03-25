@@ -107,7 +107,7 @@ export default function ListingShowPage() {
             </h3>
             <h3 className="info-title">
               Security Deposit:
-              <span className="price">{listing.securityDeposit} </span>
+              <span className="price"> {listing.securityDeposit} </span>
             </h3>
 
             <p>

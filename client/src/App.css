@@ -1027,7 +1027,7 @@ button[type="submit"]:active {
 }
 
 .info-title {
-  color: rgb(255, 234, 0);
+  color: var(--text-dark);
   font-size: larger;
   font-weight: bold;
 }
