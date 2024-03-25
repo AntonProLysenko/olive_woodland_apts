@@ -1027,13 +1027,14 @@ button[type="submit"]:active {
 }
 
 .info-title {
-  color: var(--text-dark);
+  color: rgb(255, 234, 0);
+  font-size: larger;
+  font-weight: bold;
 }
 
-.sub-title {
-  font-weight: bold;
-  font-size: large;
-}
+/* .sub-title {
+  /* font-size: large; */
+/* } */ 
 
 .title {
   color: #fefefe;

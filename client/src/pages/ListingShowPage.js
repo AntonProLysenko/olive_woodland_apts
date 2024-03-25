@@ -111,7 +111,7 @@ export default function ListingShowPage() {
             </h3>
 
             <p>
-              <span className="info-title sub-title">Utilities: </span>
+              <span className="sub-title info-title">Utilities: </span>
               <span>{listing.utilities}</span>
             </p>
 
@@ -119,7 +119,7 @@ export default function ListingShowPage() {
             <p>{listing.description2}</p>
 
             <p>
-              <span className="info-title sub-title">Pets: </span>
+              <span className="sub-title info-title">Pets: </span>
               {listing.pets}
             </p>
             <div className="bottom-buttons">
