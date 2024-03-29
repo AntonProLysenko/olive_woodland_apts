@@ -65,7 +65,7 @@ export default function ListingShowPage() {
               onClick={() => setSlide(!slide)}
               className="stack"
             >
-              <img src={listing.selectedFile1} width="250" height="180" alt="Salem Crown Apartment Interior"/>
+              <img src={listing.selectedFile1} width="250" height="180" alt="Green Forest Apartment Interior"/>
               <span>
                 Click to See All Photos and <br />
                 Virtual Tour
@@ -123,7 +123,7 @@ export default function ListingShowPage() {
               {listing.pets}
             </p>
             <div className="bottom-buttons">
-              <a href="sms:937-985-0069?&body=Hello! I'm interested in Salem Crown Apartments">
+              <a href="sms:937-985-0069?&body=Hello! I'm interested in Green Forest Apartments">
                 <button className="create-btn">
                   <i className="fa fa-comments" aria-hidden="true"></i>
                   &nbsp; Text Us
@@ -131,7 +131,7 @@ export default function ListingShowPage() {
               </a>
 
               <a
-                href="mailto:salemcrownapts@gmail.com?subject=eMail from Salem Crown Web Site&body=Hello! I'm interested in Salem Crown Apartments"
+                href="mailto:greenforestapts@gmail.com?subject=eMail from Green Forest Web Site&body=Hello! I'm interested in Green Forest Apartments"
                 target="_blank"
                 rel="noreferrer"
               >
