@@ -209,13 +209,16 @@ useEffect(()=>{
       
       <h1 className='title'>Total unique visitors {sortedVisitors.length}</h1> 
       
+      <h2 id="Title_visitor_cities_ul" className='title'>Cities visited:</h2>
       <ul id='visitor_cities_ul'>
-      <h2 className='title'>Cities visited:</h2>
       {
-         Object.entries(availabileDates).map(([key, value]) =>{
+         Object.entries(availabileDates).map(([key, values]) =>{
           if (key === "cities"){
+            
             return(
-              <li> {`${value},  `}</li> 
+              values.map((city)=>{
+                return <li> {`${city}`}</li> 
+              })
               )
           }
         })

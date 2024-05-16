@@ -117,7 +117,13 @@ export default function ListingDetailsPage({ listings }) {
           <div className="infobox">
             <ul className="quals-list">
             {quals.map((pa, idx) => {
-              return <li key={idx}>{pa}</li>;
+              if (pa.includes("evictions")){
+                return <li key={idx}><strong>{pa}</strong></li>;
+              }else{
+                return <li key={idx}>{pa}</li>;
+              }
+              // console.log("PA:",pa.includes("evictions"));
+              
             })}
             </ul>
           </div>
