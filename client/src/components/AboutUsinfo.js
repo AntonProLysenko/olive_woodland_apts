@@ -110,7 +110,7 @@ Any credit is acceptable.
 
 
 <p>
-No section 8.
+We do not participate in inspection programs.
         
 </p>
 
