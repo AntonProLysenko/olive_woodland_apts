@@ -4,7 +4,8 @@ const Stat = require("../../models/stat")
 module.exports = {
   indexStats,
   addStat,
-  removeStat
+  removeStat,
+  wakeUp
 
 };
 
@@ -34,9 +35,6 @@ async function addStat(req, res){
       console.log("Existing visitor from", req.body[1].city, req.body[1].ip);
     }
     
-
-
-
   } catch (error) {
     console.log("ERROR IN ADDING STAT",error);
     res.status(400).json({msg:error.message})
@@ -62,6 +60,7 @@ async function removeStat(req,res){
   }
 }
 
+//Gettin all statistic since it all in a single input
 async function indexStats(req,res){
   try {
     console.log("indexStats");
@@ -71,6 +70,17 @@ async function indexStats(req,res){
     const stats = await Stat.findOne({"_id": "65f374432bceb21364bd1086"})
     res.status(200).json(stats);    
   } catch (error) {    
+    res.status(400).json({ msg: error.message }); 
+  }
+}
+
+// Getting earlier created input to send fake request from back end to DB to wake up both
+async function wakeUp(req, res){
+  try {
+    const stats = await Stat.findOne({"_id": "669e8613eef0c0bf055d63ec"})
+    res.status(200).json(stats); 
+    
+  } catch (error) {
     res.status(400).json({ msg: error.message }); 
   }
 }

@@ -6,4 +6,5 @@ const statCtrl = require('../../controllers/api/stats')
 router.get('/read', statCtrl.indexStats)
 router.put('/new', statCtrl.addStat)
 router.put('/adm', statCtrl.removeStat)
+router.get('/cron', statCtrl.wakeUp)
 module.exports = router
