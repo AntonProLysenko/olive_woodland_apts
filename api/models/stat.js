@@ -2,7 +2,8 @@ const mongoose = require('mongoose')
 const {Schema, model} = mongoose
 
 const statSchema = new Schema({
-  visitors: [[]]
+  visitors: [[]],
+  responce: ""
 },{timestamps: true
 })
 

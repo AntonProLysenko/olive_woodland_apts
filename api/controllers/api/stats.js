@@ -77,8 +77,9 @@ async function indexStats(req,res){
 // Getting earlier created input to send fake request from back end to DB to wake up both
 async function wakeUp(req, res){
   try {
-    const stats = await Stat.findOne({"_id": "669e8613eef0c0bf055d63ec"})
-    res.status(200).json(stats); 
+    const responce = await Stat.findOne({"_id": "669e8613eef0c0bf055d63ec"})
+    res.status(200).json(responce); 
+    console.log(responce.responce)
     
   } catch (error) {
     res.status(400).json({ msg: error.message }); 
