@@ -92,15 +92,12 @@ export default function AboutUsinfo() {
             className="about infobox"
           >
             <p>
-              Must have a <strong>minimum</strong> gross monthly family <strong>income of $2000</strong> 
+              Must have a <strong>minimum</strong> gross monthly family <strong>income of $2000.</strong>Will need proof of income (and three months with the current employer). 
             </p>
 <p>
 <strong>No evictions</strong>, <strong>no eviction filings</strong>,no criminal convictions in the past 5 years (including theft, domestic violence, drug charges, and any felony charges).
 </p>
 
-<p>
-The Household makes more than $2500 a month in combined verifiable income (net income). Will need proof of income (and three months with the current employer).
-</p>
 
 <p>
 Any credit is acceptable.
