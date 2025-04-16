@@ -70,8 +70,7 @@ export default function AboutUsinfo() {
             </p>
             <p>
               We strive to provide nice, clean, fully remodeled, comfortable, and affordable
-              housing for responsible residents! 27-unit apartment complex under
-              new management
+              housing for responsible residents!
             </p>
           </div>
         </div>
