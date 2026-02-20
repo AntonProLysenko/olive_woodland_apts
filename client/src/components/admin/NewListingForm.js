@@ -4,8 +4,14 @@ import FileBase from 'react-file-base64';
 
 
 import { create } from "../../utilities/listings-service";
+import loading from '../loading';
 
 export default function NewListingForm  (){
+    
+  const [display, setDisplay] = useState({
+      isLoaded: false,
+      message: "Loading form"
+    });
 
     const [error, setError] = useState('');
     const [listingData, setListingData] = useState({   
@@ -34,12 +40,17 @@ export default function NewListingForm  (){
 
   
   const formData = {...listingData}
+  setDisplay({
+    ...display,
+    isLoaded: true,
+    message:""
+  })
 
   const submitAndRedirect = async(evt) =>{
     
     let blnSubmited = await handleSubmit(evt)
     console.log("blnSubmited", blnSubmited)
-    if (blnSubmited) navigation("/irunthis");
+    if (blnSubmited) ;
   }
 
   
@@ -49,26 +60,35 @@ export default function NewListingForm  (){
       // console.log("formData: ", formData)
       try {
         setListingData(formData)
-        // navigation("/irunthis");
+        setDisplay({
+          ...display,
+          isLoaded: false,
+          message:"Creating new listing"
+        })
+
         let responce = await create(formData)
-        if (responce.title===formData.title) {
-          blnSuccess = true
+        if (responce.staus==201) {
+          navigation("/irunthis")
+        }else{
+          setDisplay({
+            ...display,
+            isLoaded: true,
+            message:""
+          })
         }
-          console.log ("Creation response: ", responce)
-          console.log("Creation Data: ", formData)
-          console.log(responce.title == formData.title)
+          
       } catch(error){
         setError(`Unexpected error! ${error}`)
       }
       return blnSuccess
     }
 
-    return(
+    return display.isLoaded ?   (
      
       <div>
 
 
-        <form  onSubmit={submitAndRedirect}>
+        <form  onSubmit={handleSubmit}>
 
 
           <div className = " create-form, form-container infobox">
@@ -134,6 +154,21 @@ export default function NewListingForm  (){
                
                   <div className = "file-input-wrapper">
                     <label className="input-group-text" htmlFor="selectedFile1">Select Main Photo</label>
+                    {/* <input
+                type="file"
+                accept="image/*"
+                onChange={(e) => {
+                  const file = e.target.files?.[0];
+                  if (!file) return;
+
+                  const reader = new FileReader();
+                  reader.onloadend = () => {
+                    const base64 = reader.result; // <-- это base64 DataURL
+                    setListingData({ ...listingData, selectedFile1: base64 });
+                  };
+                  reader.readAsDataURL(file);
+                }}
+              /> */}
                     <FileBase type="file" className="fileBtn" id="selectedFile1" name = "selectedFile1" multiple={false}  onDone={({ base64 }) => setListingData({ ...listingData, selectedFile1: base64 })} />
                   </div>
 
@@ -192,5 +227,5 @@ export default function NewListingForm  (){
           
         </form>
       </div>
-    )
+    ): loading(display.message)
 }

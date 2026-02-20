@@ -17,20 +17,44 @@ export default function ListingDetailsPage({ listings }) {
   const { id } = useParams();
   const navigation = useNavigate();
 
+  const [display, setDisplay] = useState({
+    isLoaded: false,
+    message: "Getting Listing"
+  });
+
   async function getListing() {
     const listing = await listingsAPI.getById(id);
     setListing(listing);
+    setDisplay({
+      ...display,
+      isLoaded:true,
+      message:""
+    })
   }
 
   useEffect(() => {
     getListing();
-  }, [setListing]);
+  }, []);
 
   const handleDelete = async (evt) => {
     // evt.preventdefault()
     try {
-      navigation("/irunthis");
-      await deleteListing(listing);
+      setDisplay({
+        ...display,
+        isLoaded:false,
+        message:"Deleting"
+      })
+      let deleteResponce = await deleteListing(listing);
+      if (deleteResponce.status == 201){
+        navigation("/irunthis");
+      }else{
+        setDisplay({
+          ...display,
+          isLoaded:true,
+          message:""
+        })
+      }
+      
     } catch {}
   };
 
@@ -149,7 +173,7 @@ export default function ListingDetailsPage({ listings }) {
 
   return (
     <>
-      {listing ? loaded() : loading()}
+      {display.isLoaded ? loaded() : loading(display.message)}
     </>
   );
 }

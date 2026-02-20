@@ -1,6 +1,6 @@
 import { useState, useEffect} from 'react';
 
-// import * as listingsAPI from "../../utilities/listings-api"
+import * as listingsAPI from "../../utilities/listings-api"
 import {Link} from "react-router-dom"
 import moment from 'moment';//for calculating dataof change from now
 
@@ -9,18 +9,18 @@ import moment from 'moment';//for calculating dataof change from now
 import loading from '../../components/loading';
 
 
-export default function AdminHome({listings, visitors, getVisitors}) {
+export default function AdminHome({ourlistings, visitors, getVisitors}) {
   // const listingsArr = Object.values(listings);//converting object props to array props
-//const [listings, setListings] = useState();//getting all listings from db
+const [listings, setListings] = useState();//getting all listings from db
 
-// async function getListings() {
-//   const listings = await listingsAPI.getAll();
-//   setListings(listings);
-// }
+async function getListings() {
+  const listings = await listingsAPI.getAll();
+  setListings(listings);
+}
 
-// useEffect(()=>{
-//   getListings()
-// },[setListings])
+useEffect(()=>{
+  getListings()
+},[])
 
 const [sortedVisitors, setSortedVisitors] = useState([])
 
@@ -102,11 +102,11 @@ function createSetOfDates(initialData){
 
 function sortVisitors(allvisitors){
 
-  console.log("sortVisitors");
+  // console.log("sortVisitors");
   
   let sorted = allvisitors
 
-  console.log(sorted);
+  // console.log(sorted);
   
 
   if (filterOptions.year !== 'all years'){

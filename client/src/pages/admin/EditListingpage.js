@@ -11,6 +11,11 @@ import loading from '../../components/loading';
 export default function EditListingpage (){
     const [listing, setListing] = useState();
     const [error, setError] = useState('');
+    const [display, setDisplay] = useState({
+      isLoaded: false,
+      message: "Getting Listing"
+    });
+
     const {id} = useParams()
     const navigation = useNavigate();
    
@@ -18,19 +23,37 @@ export default function EditListingpage (){
     async function getListing() {
       const listing = await listingsAPI.getById(id);
       setListing(listing);
+      setDisplay({
+        ...display,
+        isLoaded: true,
+        message: ""
+      });
     }
 
     useEffect(() => {
       getListing();
-    }, [setListing]);
+    }, []);
 
     const  handleUpdate = async (evt) => {
-
         evt.preventDefault()
       try {
         console.log("Sending:", listing)
+        setDisplay({
+          ...display,
+          isLoaded: false,
+          message: "Updating Listing"
+        });
         let updResponse = await update(listing, listing._id)
-        if (updResponse.status == 201) navigation(`/irunthis/${listing._id}`);
+        console.log("Applied: ", updResponse)
+        if (updResponse.status == 201) {
+          navigation(`/irunthis/${listing._id}`);
+        }else{
+          setDisplay({
+            ...display,
+            isLoaded: true,
+            message: ""
+          });
+        }
       } catch(e) {
         setError(`Failed to update ${e}`)
       }
@@ -41,7 +64,7 @@ export default function EditListingpage (){
 
 
     function loaded(){
-      console.log(listing.available)
+      // console.log(listing.available)
     return(
         <>
             <form  autoComplete="off" onSubmit={handleUpdate}>
@@ -177,6 +200,6 @@ export default function EditListingpage (){
   )}
 
 
-
-  return  listing ? loaded() : loading()
+  // return  loading(display.message)
+  return  display.isLoaded ? loaded() : loading(display.message)
 }

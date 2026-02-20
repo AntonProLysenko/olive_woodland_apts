@@ -42,7 +42,7 @@ async function deleteListing(req,res){
     // console.log(req.body)
     // res.redirect("/principal")
     const deletedListing = await Listing.findByIdAndDelete(req.body._id)
-    res.status(200).json(deletedListing)
+    res.status(200).json({...deletedListing, status: 201})
    
   } catch (error) {
     res.status(400).json({msg:error.message})
@@ -57,7 +57,7 @@ async function updateListing(req,res){
     
     newListing = await Listing.findByIdAndUpdate(id, req.body)
     // res.redirect(`/principal/${id}`)
-    // console.log("Saved to DB:", newListing._id);
+    console.log("Saved to DB:", newListing._id);
     res.status(201).json({...newListing, status: 201}); //
   } catch (e) {
     console.error("Edit error:", e);
@@ -67,27 +67,13 @@ async function updateListing(req,res){
 }
 
 //CREATE
-// async function createListing (req,res){
-//   try{
-//     console.log("createListing", req)
-//     // req.body.available  = req.body.available === "on"? true : false;
-//     await Listing.create(req.body)
-//     // res.redirect('/principal')
-
-//   }catch(e){
-
-//     console.log(e);
-    
-//     res.status(400).json({msg:e.message})
-//   }
-// }
 
 async function createListing(req, res) {
   try {
     console.log("Incoming body:", req.body);
     const newListing = await Listing.create(req.body);
     console.log("Saved to DB:", newListing._id);
-    res.status(201).json(newListing); // ← THIS IS REQUIRED
+    res.status(201).json({...newListing, status: 201});  
     // res.status(400).json({ msg: "e.message" });
 
   } catch (e) {
