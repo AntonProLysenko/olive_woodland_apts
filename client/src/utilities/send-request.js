@@ -17,11 +17,17 @@ export default async function sendRequest(url, method = 'GET', payload = null) {
     options.headers.Authorization = `Bearer ${token}`;
   }
 
-  
+  // console.log("inside sendRequest", options.body)
   const res = await fetch(url, options);
-
+  // let data = res.json()
   
   // res.ok will be false if the status code set to 4xx in the controller action
-  if (res.ok) return res.json();
-  throw new Error('Bad Request');
+  if (res.ok){
+    console.log("res in send-req method", res);
+    return res.json()
+  } 
+    
+  // console.log("Response in send Req:", res)
+  throw new Error(`Bad Request: ${res.status}${res.body}`);
+
 }

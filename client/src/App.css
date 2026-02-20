@@ -791,39 +791,62 @@ button[type="submit"] {
 .photos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 5vh;
 }
 .file-input-wrapper label:hover {
-    background-color: #b2cfec;
+    /* background-color: #b2cfec; */
     cursor: pointer;
 }
 
 .file-input-wrapper{
   display: flex;
   flex-direction: row;
+  padding-bottom: 10px;
 }
+
 
 
 input[type="file"] {
   border: none;
-    padding:6px 0 0 7px;
+  /* background-color: #767e87; */
+  /* margin: 10px; */
+  /* max-width: 80%;
+  max-height: 80%; */
+  padding: 10px;
+  /* text-align: center; */
+    padding:7px 0 0 7px;
     &::-webkit-file-upload-button {
         display: none;
     }
     &::file-selector-button {
-        display: none;
+        /* display: none; */
+        border-radius: 5px;
+        border: none;
+        padding: 0.3em;
+        font-size: 1.2em;
+        background-color: #ffffff;
     }
+    &::file-selector-button:hover {
+      background-color: #d2efce;
+  }
 }
+
+
 
 .input-group-text{
   margin-top: 10px;
   width:4vw;
   min-width: fit-content;
   cursor: pointer;
+  display: none;
 }
 
 .fileBtn {
+
   cursor: pointer;
+  /* display: none; */
 }
 
 button[type="submit"]:hover {

@@ -13,7 +13,8 @@ export function deleteListing(listingData){
 }
 
 export function create(listingData){
-  return sendRequest(`${BASE_URL}/new`, 'POST',listingData)
+
+  return sendRequest(`${BASE_URL}/new`, 'POST', listingData)
 }
 
 export function getById(id) {

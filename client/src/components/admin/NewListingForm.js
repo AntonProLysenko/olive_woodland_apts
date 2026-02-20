@@ -33,32 +33,42 @@ export default function NewListingForm  (){
   const navigation = useNavigate();
 
   
-    const formData = {...listingData}
+  const formData = {...listingData}
+
+  const submitAndRedirect = async(evt) =>{
+    
+    let blnSubmited = await handleSubmit(evt)
+    console.log("blnSubmited", blnSubmited)
+    if (blnSubmited) navigation("/irunthis");
+  }
 
   
-
-  
-    const  handleSubmit = async (evt) => {
-         evt.preventDefault()
-        
-        try {
-          setListingData(formData)
-          navigation("/irunthis");
-          await create(formData)
-      
-       } catch {
-        setError("Failed - Try Again")
-       }
-
-       
-     }
+  const  handleSubmit = async (evt) => {
+      let blnSuccess = false;
+      evt.preventDefault()
+      // console.log("formData: ", formData)
+      try {
+        setListingData(formData)
+        // navigation("/irunthis");
+        let responce = await create(formData)
+        if (responce.title===formData.title) {
+          blnSuccess = true
+        }
+          console.log ("Creation response: ", responce)
+          console.log("Creation Data: ", formData)
+          console.log(responce.title == formData.title)
+      } catch(error){
+        setError(`Unexpected error! ${error}`)
+      }
+      return blnSuccess
+    }
 
     return(
      
       <div>
 
 
-        <form  onSubmit={handleSubmit}>
+        <form  onSubmit={submitAndRedirect}>
 
 
           <div className = " create-form, form-container infobox">
@@ -73,11 +83,11 @@ export default function NewListingForm  (){
               <div className='prices'>
                 <div>
                 <label>Rent:</label>
-                <input type="text" name="rent" placeholder="Monthly Rent Price" required onChange={(e) => setListingData({ ...listingData, rent: e.target.value })}/>
+                <input type="number" name="rent" placeholder="Monthly Rent Price" required onChange={(e) => setListingData({ ...listingData, rent: e.target.value })}/>
                 </div>
                 <div>
                 <label>Security Deposit:</label>
-                <input type="text" name="securityDeposit" placeholder="Security Deposit Price" required onChange={(e) => setListingData({ ...listingData, securityDeposit: e.target.value })}/>
+                <input type="number" name="securityDeposit" placeholder="Security Deposit Price" required onChange={(e) => setListingData({ ...listingData, securityDeposit: e.target.value })}/>
                 </div>          
               </div>
 
@@ -108,7 +118,8 @@ export default function NewListingForm  (){
                 <div className = "checkr">
                   <label className='available'>Available: &nbsp;</label>
                   <label className="switch">
-                    <input type="checkbox" name="available" onChange={(e) => setListingData({ ...listingData, available: e.target.value })} />
+                    {/* <input type="checkbox" name="available" onChange={(e) => setListingData({ ...listingData, available: e.target.value })} /> */}
+                    <input type="checkbox" name="available" onChange={(e) => setListingData({ ...listingData, available: e.target.checked })} /> 
                     <span className="slider"></span>
                   </label>
                 </div>
@@ -138,7 +149,7 @@ export default function NewListingForm  (){
 
                   <div className = "file-input-wrapper">
                     <label className="input-group-text" htmlFor="selectedFile4">Select Fourth Photo</label>
-                    <FileBase type="file" className="fileBtn" id="selectedFile4" name = "selectedFile4" multiple={false}  onDone={({ base64 }) => setListingData({ ...listingData, selectedFile4: base64 })} />
+                    <FileBase type="file" className="fileBtn" id="selectedFile4"  name = "selectedFile4" multiple={false}  onDone={({ base64 }) => setListingData({ ...listingData, selectedFile4: base64 })} />
                   </div>
 
                   <div className = "file-input-wrapper">
@@ -163,12 +174,11 @@ export default function NewListingForm  (){
                 </div>
                   <div>
                     <p>Note: first picture will appear as a main listing photo</p>
-                    PS. There is ALREADY a FLOOR PLAN in Photos, DO NOT Add it here
+                    PS. There is ALREADY a FLOOR PLAN  and A Video in Photos, DO NOT Add it here
                   </div> 
 
                 <p className="error-message">&nbsp;{error}</p>
               <button type="submit">Create Listing</button>
-                FUUUUU
             </div>
       
 
