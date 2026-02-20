@@ -296,7 +296,7 @@ useEffect(()=>{
       <h1 className='title'>Listings</h1> 
       <Link to = "/irunthis/new"><button className='create-btn standart-button-black'>Create new</button></Link>
       
-      {listings&&visitors.length!==0? loaded():loading()}
+      {listings&&visitors.length!==0? loaded():loading("Getting Visitors and Listings")}
     </>
   )
 }

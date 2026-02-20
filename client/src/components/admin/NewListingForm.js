@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { useState  } from "react";
+import { useState, useEffect  } from "react";
 import FileBase from 'react-file-base64';
 
 
@@ -9,41 +9,43 @@ import loading from '../loading';
 export default function NewListingForm  (){
     
   const [display, setDisplay] = useState({
-      isLoaded: false,
+      isLoaded: true,
       message: "Loading form"
     });
 
     const [error, setError] = useState('');
-    const [listingData, setListingData] = useState({   
 
-    title: '',
-    rent: '',
-    securityDeposit: '',
-    utilities: '',
-    description1: '',
-    description2: '',
-    pets: '',
-    qualifications: '',
-    available: false,
-    selectedFile1: '',
-    selectedFile2: '',
-    selectedFile3: '',
-    selectedFile4: '',
-    selectedFile5: '',
-    selectedFile6: '',
-    selectedFile7: '',
-    selectedFile8: '',
-  });
+    const [listingData, setListingData] = useState({   
+      title: '',
+      rent: '',
+      securityDeposit: '',
+      utilities: '',
+      description1: '',
+      description2: '',
+      pets: '',
+      qualifications: '',
+      available: false,
+      selectedFile1: '',
+      selectedFile2: '',
+      selectedFile3: '',
+      selectedFile4: '',
+      selectedFile5: '',
+      selectedFile6: '',
+      selectedFile7: '',
+      selectedFile8: '',
+    });
 
 
   const navigation = useNavigate();
 
   
   const formData = {...listingData}
-  setDisplay({
-    ...display,
-    isLoaded: true,
-    message:""
+  useEffect(()=>{
+
+    setDisplay({
+      isLoaded: true,
+      message:""
+    })
   })
 
   const submitAndRedirect = async(evt) =>{
