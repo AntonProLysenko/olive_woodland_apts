@@ -55,7 +55,9 @@ export default function EditListingpage (){
           });
         }
       } catch(e) {
-        setError(`Failed to update ${e}`)
+        setError(`Failed to update ${e.message}`)
+        // setError(`Unexpected error! ${error.message}`);
+        setDisplay(d => ({ ...d, isLoaded: true, message: "" }));
       }
       // finally{
       //   navigation(`/irunthis/${listing._id}`);

@@ -5,6 +5,7 @@ import FileBase from 'react-file-base64';
 
 import { create } from "../../utilities/listings-service";
 import loading from '../loading';
+// import { setDefaultResultOrder } from 'dns';
 
 export default function NewListingForm  (){
     
@@ -46,14 +47,17 @@ export default function NewListingForm  (){
       isLoaded: true,
       message:""
     })
-  })
+  },[])
 
-  const submitAndRedirect = async(evt) =>{
-    
-    let blnSubmited = await handleSubmit(evt)
-    console.log("blnSubmited", blnSubmited)
-    if (blnSubmited) ;
-  }
+  useEffect(()=>{
+
+    setDisplay({
+      isLoaded: true,
+      message:""
+    })
+  },[setError])
+
+
 
   
   const  handleSubmit = async (evt) => {
@@ -80,7 +84,8 @@ export default function NewListingForm  (){
         }
           
       } catch(error){
-        setError(`Unexpected error! ${error}`)
+        setError(`Unexpected error! ${error.message}`);
+        setDisplay(d => ({ ...d, isLoaded: true, message: "" }));
       }
       return blnSuccess
     }
@@ -98,35 +103,35 @@ export default function NewListingForm  (){
             
             <div className='form-title'>
               <label htmlFor = "title">Title:</label>
-              <input type="text" name="title" id = "title" placeholder="Title" required onChange={(e) => setListingData({ ...listingData, title: e.target.value })}/>
+              <input type="text" name="title" id = "title" placeholder="Title" required onChange={(e) => setListingData({ ...listingData, title: e.target.value })} value = {listingData.title}/>
             </div>
               
               
               <div className='prices'>
                 <div>
                 <label>Rent:</label>
-                <input type="number" name="rent" placeholder="Monthly Rent Price" required onChange={(e) => setListingData({ ...listingData, rent: e.target.value })}/>
+                <input type="number" name="rent" placeholder="Monthly Rent Price" required onChange={(e) => setListingData({ ...listingData, rent: e.target.value })} value = {listingData.rent}/>
                 </div>
                 <div>
                 <label>Security Deposit:</label>
-                <input type="number" name="securityDeposit" placeholder="Security Deposit Price" required onChange={(e) => setListingData({ ...listingData, securityDeposit: e.target.value })}/>
+                <input type="number" name="securityDeposit" placeholder="Security Deposit Price" required onChange={(e) => setListingData({ ...listingData, securityDeposit: e.target.value })} value = {listingData.securityDeposit}/>
                 </div>          
               </div>
 
               <label>Utilities:</label>
-              <textarea className='small-textarea' name="utilities" placeholder="Enter utilities policy" onChange={(e) => setListingData({ ...listingData, utilities: e.target.value })}/> 
+              <textarea className='small-textarea' name="utilities" placeholder="Enter utilities policy" onChange={(e) => setListingData({ ...listingData, utilities: e.target.value })} value = {listingData.utilities}/> 
                 
 
                 
                 <label>Description Paragraph 1:</label>
-                <textarea className='description'  name="description1" placeholder="Description" required onChange={(e) => setListingData({ ...listingData, description1: e.target.value })}/>
+                <textarea className='description'  name="description1" placeholder="Description" required onChange={(e) => setListingData({ ...listingData, description1: e.target.value })} value = {listingData.description1}/>
                 
                 <label>Description Paragraph 2:</label>
-                <textarea className='description' name="description2" placeholder="Description" onChange={(e) => setListingData({ ...listingData, description2: e.target.value })}/> 
+                <textarea className='description' name="description2" placeholder="Description" onChange={(e) => setListingData({ ...listingData, description2: e.target.value })} value = {listingData.description2}/> 
                 
 
                 <label>Pets:</label>
-                <textarea className='small-textarea' name="pets" placeholder="Enter pet policy" onChange={(e) => setListingData({ ...listingData, pets: e.target.value })}/> 
+                <textarea className='small-textarea' name="pets" placeholder="Enter pet policy" onChange={(e) => setListingData({ ...listingData, pets: e.target.value })} value = {listingData.pets}/> 
                   
                   
                   
@@ -134,7 +139,7 @@ export default function NewListingForm  (){
 
 
                 <label>Qualifications: </label>
-                <textarea  name="qualifications" placeholder="Enter Minimum Qualifications for Residents devided by ." required onChange={(e) => setListingData({ ...listingData, qualifications: e.target.value })}/>
+                <textarea  name="qualifications" placeholder="Enter Minimum Qualifications for Residents devided by ." required onChange={(e) => setListingData({ ...listingData, qualifications: e.target.value })} value = {listingData.qualifications}/>
 
 
                 <div className = "checkr">

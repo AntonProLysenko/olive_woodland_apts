@@ -34,7 +34,7 @@ export default function ListingDetailsPage({ listings }) {
 
   useEffect(() => {
     getListing();
-  }, []);
+  }, [setListing]);
 
   const handleDelete = async (evt) => {
     // evt.preventdefault()
