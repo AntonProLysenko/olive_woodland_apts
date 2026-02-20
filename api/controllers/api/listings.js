@@ -28,6 +28,7 @@ async function indexListing(req, res) {
 //NEW
 async function newListing (req,res) {
   try{
+    console.log("newListing", req)
     req.status(200)
   }catch(e){
     res.status(400).json({ msg: e.message });
@@ -50,29 +51,48 @@ async function deleteListing(req,res){
 //UPDATE
 async function updateListing(req,res){
   try {
+    console.log("Incoming body:", req.body);
     const id = req.params.id;
-    req.body.available  = req.body.available === "on"? true : false;
+    // req.body.available  = req.body.available === "on"? true : false;
     
-    await Listing.findByIdAndUpdate(id, req.body)
+    newListing = await Listing.findByIdAndUpdate(id, req.body)
     // res.redirect(`/principal/${id}`)
+    // console.log("Saved to DB:", newListing._id);
+    res.status(201).json({...newListing, status: 201}); //
   } catch (e) {
-    // console.log("here"+req.params);
+    console.error("Edit error:", e);
     res.status(400).json({msg:e.message})
   }
+
 }
 
 //CREATE
-async function createListing (req,res){
-  try{
-    req.body.available  = req.body.available === "on"? true : false;
-    await Listing.create(req.body)
-    // res.redirect('/principal')
+// async function createListing (req,res){
+//   try{
+//     console.log("createListing", req)
+//     // req.body.available  = req.body.available === "on"? true : false;
+//     await Listing.create(req.body)
+//     // res.redirect('/principal')
 
-  }catch(e){
+//   }catch(e){
 
-    console.log(e);
+//     console.log(e);
     
-    res.status(400).json({msg:e.message})
+//     res.status(400).json({msg:e.message})
+//   }
+// }
+
+async function createListing(req, res) {
+  try {
+    console.log("Incoming body:", req.body);
+    const newListing = await Listing.create(req.body);
+    console.log("Saved to DB:", newListing._id);
+    res.status(201).json(newListing); // ← THIS IS REQUIRED
+    // res.status(400).json({ msg: "e.message" });
+
+  } catch (e) {
+    console.error("Create error:", e);
+    res.status(400).json({ msg: e.message });
   }
 }
 

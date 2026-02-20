@@ -3,15 +3,15 @@ const { Schema, model } = mongoose
 
 
 const listingSchema = new Schema({
-    title: {type:String, required:true},
-    rent: {type:String, required:true},
-    securityDeposit: {type:String, required:true},
+    title: {type:String, required:true, minLength: 3},
+    rent: {type:String, required:true, min: 1},
+    securityDeposit: {type:String, required:true, min: 1},
     utilities: {type:String, required:true},
     description1: {type:String, required:true},
     description2: {type:String, required:true},
     pets: {type:String, required:true},
     qualifications: {type:String, required:true},
-    available:Boolean,
+    available:{type:Boolean, required:true},
     selectedFile1: {type:String},
     selectedFile2: {type:String},
     selectedFile3: {type:String},

@@ -63,7 +63,7 @@ async function removeStat(req,res){
 //Gettin all statistic since it all in a single input
 async function indexStats(req,res){
   try {
-    console.log("indexStats");
+    // console.log("indexStats");
     
     // const stats = await Stat.find({})
     // const stats = await Stat.findOne({"_id": "65d4cbf67ee317d5ff4a7b1b"})//test collection
