@@ -4,21 +4,23 @@ import { useState } from "react";
 
 import FsLightbox from "fslightbox-react";
 
-import newKitchenImg from "../assets/apatrment/kitchen_new2.jpg"
-import newKitchenImg2 from "../assets/apatrment/kitchen_new.jpg"
-import oldCloset from "../assets/apatrment/8.jpg"
-import oldLiving from "../assets/apatrment/living_old.jpg"
-import oldLiving2 from "../assets/apatrment/living_entry_old.jpg"
-import newLiving2 from "../assets/apatrment/living_new.jpg"
-import newLiving3 from "../assets/apatrment/Living_new3.jpg"
-import oldBathroom from "../assets/apatrment/Bathroom_old.jpg"
-import newBedroom from "../assets/apatrment/Bedroom_new.jpg"
+import newKitchenImg from "../assets/apatrment/kitchen_new2.png"
+import newKitchenImg2 from "../assets/apatrment/kitchen_new.png"
+import oldCloset from "../assets/apatrment/8.png"
+import oldLiving from "../assets/apatrment/living_old.png"
+import oldLiving2 from "../assets/apatrment/living_entry_old.png"
+import newLiving2 from "../assets/apatrment/living_new.png"
+import newLiving3 from "../assets/apatrment/Living_new3.png"
+import oldBathroom from "../assets/apatrment/Bathroom_old.png"
+import newBedroom from "../assets/apatrment/Bedroom_new.png"
+import furnishedBedroom from "../assets/apatrment/bedroom_fur.JPG"
+import furnishedLiving from "../assets/apatrment/living_fur.JPG"
 
 // import oldBedroom from "../assets/apatrment/bedroom_old.jpg"
 import floorPlan from "../assets/apatrment/floor_plan.png"
-import oldBedroom2 from "../assets/apatrment/bedroom_old2.jpg"
-import oldKitchen from "../assets/apatrment/kitchen_old.jpg"
-import appliances from "../assets/apatrment/appliences.jpg"
+import oldBedroom2 from "../assets/apatrment/bedroom_old2.png"
+import oldKitchen from "../assets/apatrment/kitchen_old.png"
+import appliances from "../assets/apatrment/appliences.png"
 
 import outside from "../assets/outside.jpg"
 import outsideAir from "../assets/outside above.jpg"
@@ -410,6 +412,8 @@ No pets over 25 lbs.
             <iframe data-aos="zoom-in"
             data-aos-delay="300"
             data-aos-duration="1500"  src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FGreenForestApts%2Fvideos%2F537745906753895%2F&show_text=false&width=560&t=2" width="560" height="314" style={{border:"none", overflow: "hidden"}} scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>,
+            furnishedLiving,
+            furnishedBedroom,
             newKitchenImg,
             newKitchenImg2,
             oldCloset,
