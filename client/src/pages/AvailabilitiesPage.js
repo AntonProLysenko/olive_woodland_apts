@@ -40,7 +40,7 @@ export default function AvailabilitiesPage({listings}) {
                     <h3>{listing.title}</h3>
 
                     <h4 className="price">
-                      <span className="rent">Rent:</span> {listing.rent}/mo
+                      <span className="rent">Rent:</span> ${listing.rent}/mo
                     </h4>
                   </div>
 

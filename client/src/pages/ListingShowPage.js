@@ -77,6 +77,7 @@ export default function ListingShowPage() {
             toggler={slide}
             sources={[
               listing.selectedFile1,
+              listing.selectedFile2,
               <iframe 
               src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FGreenForestApts%2Fvideos%2F537745906753895%2F&show_text=false&width=560&t=2" 
               width="1100" height="650" style={{border:"none", overflow: "hidden"}} scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true">
@@ -90,7 +91,7 @@ export default function ListingShowPage() {
                 referrerPolicy="no-referrer-when-downgrade"
                 title = "galery show"
               ></iframe>,
-              listing.selectedFile2,
+              // listing.selectedFile2,
               listing.selectedFile3,
               listing.selectedFile4,
               listing.selectedFile5,
@@ -103,11 +104,11 @@ export default function ListingShowPage() {
 
           <div className="info info-box infobox">
             <h3 className="info-title">
-              Rent: <span className="price">{listing.rent}</span>
+              Rent: <span className="price">${listing.rent}</span>
             </h3>
             <h3 className="info-title">
               Security Deposit:
-              <span className="price"> {listing.securityDeposit} </span>
+              <span className="price"> ${listing.securityDeposit} </span>
             </h3>
 
             <p>

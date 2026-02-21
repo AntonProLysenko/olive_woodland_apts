@@ -86,13 +86,13 @@ export default function ListingDetailsPage({ listings }) {
               </span>
             </div>
           </div>
-
           <FsLightbox
             toggler={slide}
             sources={[
               <iframe 
+              // width="1100" height="650" 
               src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FGreenForestApts%2Fvideos%2F537745906753895%2F&show_text=false&width=560&t=2" 
-              width="1100" height="650" style={{border:"none", overflow: "hidden"}} scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true">
+              style={{border:"none", overflow: "hidden"}} scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true">
               </iframe>,
               listing.selectedFile1,
               listing.selectedFile2,
@@ -114,11 +114,11 @@ export default function ListingDetailsPage({ listings }) {
             )}
 
             <h3 className="info-title">
-              Rent: <span className="price">{listing.rent}</span>
+              Rent: <span className="price">${listing.rent}</span>
             </h3>
             <h3 className="info-title">
               Security Deposit:{" "}
-              <span className="price">{listing.securityDeposit} </span>
+              <span className="price">${listing.securityDeposit} </span>
             </h3>
 
             <p>
