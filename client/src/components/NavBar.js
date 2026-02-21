@@ -3,7 +3,7 @@ import * as userService from '../utilities/users-service'
 
 import logo from '../assets/logo.png'
 
-export default function NavBar ({ name, setUser }) {
+export default function NavBar ({ admin, setUser }) {
   function handleLogout () {
     // Delegate to the users-service
     userService.logOut()
@@ -20,7 +20,7 @@ export default function NavBar ({ name, setUser }) {
           </Link>
         </div>
         
-        {name?
+        {admin?
         <>
           <ul className="nav-links"> 
             <li>
@@ -35,7 +35,9 @@ export default function NavBar ({ name, setUser }) {
             <li>
               <Link to="/contact"> <span className="navbar-text">Contact Us</span> </Link>
             </li>
-          
+            <li>
+              <a target="_blank" href="https://signin.managebuilding.com/Resident/portal/global-login"> <span className="navbar-text">Resident Portal</span> </a>
+            </li>
             <li>
               <Link to="" onClick={handleLogout}> <span className="navbar-text"> Log Out</span> </Link>
             </li>
@@ -55,6 +57,10 @@ export default function NavBar ({ name, setUser }) {
             <li>
               <Link to="/contact"> <span className="navbar-text">Contact Us</span> </Link>
             </li>
+            <li>
+              <a target="_blank" href="https://signin.managebuilding.com/Resident/portal/global-login"> <span className="navbar-text">Resident Portal</span> </a>
+            </li>
+            
           </ul>
         </>
         }
