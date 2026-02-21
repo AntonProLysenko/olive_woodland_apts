@@ -78,6 +78,7 @@ async function createListing(req, res) {
 
   } catch (e) {
     console.error("Create error:", e);
+    console.log("Message: ", e.message)
     res.status(400).json({ msg: e.message });
   }
 }
