@@ -116,7 +116,7 @@ async function updateListing(req,res){
     // res.redirect(`/principal/${id}`)
     console.log("Saved to DB:", newListing._id);
     currentListing = newListing
-    res.status(201).json({...newListing, status: 201}); //
+    res.status(201).json({status: 201}); //
   } catch (e) {
     console.error("Edit error:", e);
     res.status(400).json({msg:e.message})
