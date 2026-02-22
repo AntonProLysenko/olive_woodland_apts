@@ -108,7 +108,7 @@ async function deleteListing(req,res){
 //UPDATE
 async function updateListing(req,res){
   try {
-    console.log("Incoming body:", req.body);
+    console.log("Incoming Update body:", req.body);
     const id = req.params.id;
     // req.body.available  = req.body.available === "on"? true : false;
     
