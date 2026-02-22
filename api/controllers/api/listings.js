@@ -1,7 +1,7 @@
 const express = require("express")
 const Listing = require("../../models/listing")
 
-let currentListing = {id:null}
+let currentListing = {id:null, available: null}
 
 module.exports = {
     getAllListings,
@@ -146,7 +146,7 @@ async function createListing(req, res) {
 //SHOW
 async function showListing(req, res) {
   try{
-    if (currentListing.id == req.params.id){
+    if (currentListing.id == req.params.id && currentListing.available == req.params.available){
       console.log("\n\n\t\tListings matched")
       res.status(200).json(currentListing);
     }else{
