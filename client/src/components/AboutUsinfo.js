@@ -212,6 +212,30 @@ No pets over 25 lbs.
               <figure
                 data-aos="fade-down-right"
                 data-aos-duration="1000"
+                className="gallery__item gallery__item--m1"
+              >
+                <img
+                  src={furnishedLiving}
+                  className="gallery__img"
+                  alt="Kitchen"
+                />
+              </figure>
+
+              <figure
+                data-aos="fade-up-left"
+                data-aos-duration="1000"
+                className="gallery__item gallery__item--m2"
+              >
+                <img
+                  src={furnishedBedroom}
+                  className="gallery__img"
+                  alt="Kitchen"
+                />
+              </figure>
+
+              <figure
+                data-aos="fade-down-right"
+                data-aos-duration="1000"
                 className="gallery__item gallery__item--1"
               >
                 <img
@@ -323,7 +347,7 @@ No pets over 25 lbs.
                   className="gallery__img"
                   alt="Closet"
                 />
-              </figure>
+              </figure> 
 
               {/* <figure
                 data-aos="zoom-in-up"
@@ -349,7 +373,7 @@ No pets over 25 lbs.
                   className="gallery__img"
                   alt="Outside"
                 />
-              </figure>
+              </figure> 
 
               <figure
                 data-aos="fade-up-left"
@@ -375,7 +399,7 @@ No pets over 25 lbs.
                   className="gallery__img"
                   alt="Outside Air"
                 />
-              </figure>
+              </figure>  
 
               {/* <figure
                 data-aos="fade-up-right"
