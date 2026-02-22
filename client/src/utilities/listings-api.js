@@ -8,6 +8,19 @@ export function getAll() {
   return sendRequest(BASE_URL, 'GET');
 }
 
+export function getAvailableCount(){
+   return sendRequest(`${BASE_URL}/countAvailable`, 'GET');
+}
+
+export function getShortAvailableListings(){
+   return sendRequest(`${BASE_URL}/shortAvailable`, 'GET');
+}
+
+export function getShortAllListings(){
+   return sendRequest(`${BASE_URL}/shortAll`, 'GET');
+}
+
+
 export function deleteListing(listingData){
   return sendRequest(`${BASE_URL}/:id`, 'DELETE',listingData)
 }
@@ -18,6 +31,7 @@ export function create(listingData){
 }
 
 export function getById(id) {
+  console.log("Got this id passed", id)
   return sendRequest(`${BASE_URL}/${id}`,'GET');
 }
 

@@ -1,5 +1,6 @@
 import { useState, useEffect} from 'react';
 
+
 import * as listingsAPI from "../../utilities/listings-api"
 import {Link} from "react-router-dom"
 import moment from 'moment';//for calculating dataof change from now
@@ -9,12 +10,14 @@ import moment from 'moment';//for calculating dataof change from now
 import loading from '../../components/loading';
 
 
-export default function AdminHome({ourlistings, visitors, getVisitors}) {
+export default function AdminHome({visitors, getVisitors}) {
   // const listingsArr = Object.values(listings);//converting object props to array props
 const [listings, setListings] = useState();//getting all listings from db
 
+
+
 async function getListings() {
-  const listings = await listingsAPI.getAll();
+  const listings = await listingsAPI.getShortAllListings();
   setListings(listings);
 }
 

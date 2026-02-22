@@ -607,7 +607,7 @@ position: absolute;
 .homePic > img {
 
   filter: brightness(85%);
-  height: 70vh;
+  height: 90vh;
   width: 100%;
   border-radius: 5px;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
@@ -638,11 +638,12 @@ position: absolute;
 }
 .homePic-faded>img{
   filter: brightness(75%);
-  height: 70vh;
+  height: 90vh;
   width: 100%;
   border-radius: 5px;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
   object-fit: cover;
+  /* transform: translate(50%); */
   object-position: 64% 0;
 }
 
@@ -1918,4 +1919,10 @@ input:checked + .slider:before {
     margin-bottom: -3px;
   }
   .add-container{padding-top: 10px;}
+}
+
+@media (orientation:landscape){
+  .container {
+    min-width: 90%;
+  }
 }

@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, useLocation } from 'react-router-dom'
 import { useState, useEffect } from "react"
 import FileBase from 'react-file-base64';
 
@@ -9,30 +9,52 @@ import { update } from "../../utilities/listings-service";
 import loading from '../../components/loading';
 
 export default function EditListingpage (){
-    const [listing, setListing] = useState();
+    const {id} = useParams()
+    const location = useLocation();
+    // console.log("Arrived Listing: ", passedInfo)
+    const [listing, setListing] = useState(location.state?.listing ?? null);
     const [error, setError] = useState('');
     const [display, setDisplay] = useState({
       isLoaded: false,
       message: "Getting Listing"
     });
 
-    const {id} = useParams()
+    // const passedListing = location.state?.listing ?? null;
+    // setListing(passedListing)
+    // console.log("Arrived Listing: ", listing);
+
     const navigation = useNavigate();
    
 
     async function getListing() {
-      const listing = await listingsAPI.getById(id);
-      setListing(listing);
-      setDisplay({
-        ...display,
-        isLoaded: true,
-        message: ""
-      });
+      
+      const responcelisting  = location.state?.listing ?? await listingsAPI.getById(id);
+      setListing(responcelisting);
+      console.log("Inside Get Listing And I got one")
+      if (listing){
+        setDisplay({
+          ...display,
+          isLoaded: true,
+          message: ""
+        });
+      }
+
+      console.log("Shiiiiiit no data")
     }
 
     useEffect(() => {
-      getListing();
-    }, []);
+      console.log("UseEffect Log")
+      if (!listing) {
+        console.log("Getting Listings")
+        getListing();
+      }else{
+        setDisplay({
+          ...display,
+          isLoaded: true,
+          message: ""
+        });
+      }
+    }, [id, listing]);
 
     const  handleUpdate = async (evt) => {
         evt.preventDefault()

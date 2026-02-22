@@ -3,12 +3,14 @@ import * as userService from '../utilities/users-service'
 
 import logo from '../assets/logo.png'
 
-export default function NavBar ({ admin, setUser }) {
+export default function NavBar ({ adminName, setUser }) {
   function handleLogout () {
     // Delegate to the users-service
     userService.logOut()
     setUser(null)
   }
+
+
 
   return (
     
@@ -20,7 +22,7 @@ export default function NavBar ({ admin, setUser }) {
           </Link>
         </div>
         
-        {admin?
+        {adminName?
         <>
           <ul className="nav-links"> 
             <li>

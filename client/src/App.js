@@ -4,7 +4,7 @@ import { Routes, Route,} from 'react-router-dom'
 import axios from "axios";
 
 import { getUser } from './utilities/users-service';
-import * as listingsAPI from "./utilities/listings-api";
+// import * as listingsAPI from "./utilities/listings-api";
 // import{ sendRequest} from ""
 // import sendRequest from './utilities/send-request';
 
@@ -33,7 +33,7 @@ function App() {
   
   const [currentIp, setIP] = useState(null);
   const [currentCity, setCity] = useState(undefined);
-  const [listings, setListings] = useState();
+  // const [listings, setListings] = useState();
   const [newvisitor, setVisitor] = useState(false)
   const [firstload, setFirstLoad] = useState(false)
   const [statistic, setStatistic] = useState([])
@@ -59,7 +59,7 @@ function App() {
   const getIpAddress = async () => {
     try {
       const res = await axios.get("https://api.ipify.org/?format=json");
-      console.log(res.data, "GOT IP");
+      // console.log(res.data, "GOT IP");
       setIP(res.data.ip)
       return(res.data.ip)
     } catch (error) {
@@ -69,14 +69,14 @@ function App() {
 
 
 
-  async function getListing() {
-    const listings = await listingsAPI.getAll();
-    if (listings){
-      setListings(listings);
-    }else{
-      setListings("Nothing created")
-    }
-  }
+  // async function getListing() {
+  //   const listings = await listingsAPI.getAll();
+  //   if (listings){
+  //     setListings(listings);
+  //   }else{
+  //     setListings("Nothing created")
+  //   }
+  // }
   
   async function getAnalysisData(){
     let ip = await getIpAddress()
@@ -86,7 +86,7 @@ function App() {
   async function getVisitors(){
     const statistics = await getStats();
 
-    console.log(statistics.visitors, "statistics");
+    // console.log(statistics.visitors, "statistics");
     
     if (statistic)
     // console.log(statistics, "Statis");
@@ -139,7 +139,7 @@ function App() {
 
   useEffect(() => {
     setVisitor(true)
-    getListing();
+    // getListing();
     getVisitors()
     getAnalysisData()
   }, []);
@@ -161,48 +161,48 @@ function App() {
   // },[setListings])
   // // console.log(listings)
 
-  
   return (
     <main className="App">
       {/* {!visitor && createVisitors([1, getDate()])} */}
       {user ? (
         <>
-          <NavBar name={user.name} setUser={setUser} />
+          <NavBar adminName={user.name} setUser={setUser} />
 
           <Routes>
-            <Route path="/" element={<HomePage listings={listings} />} />
+            <Route path="/" element={<HomePage/>} />
             <Route path="/about" element={<AboutUsPage />} />
             <Route path="/contact" element={<ContactUsPage />} />
             <Route
               path="/available/"
-              element={<AvailabilitiesPage listings={listings} />}
+              element={<AvailabilitiesPage/>}
             />
             <Route path="/available/:id" element={<ListingShowPage />} />
 
             {/* <Route path="/orders" element={<OrderHistoryPage />} /> */}
-            <Route path="/irunthis" element={<AdminHome visitors={statistic} getVisitors={getVisitors} listings={listings}  />} />
+            <Route path="/irunthis" element={<AdminHome visitors={statistic} getVisitors={getVisitors}/>} />
             <Route path="/irunthis/new" element={<NewListingPage />} />
             <Route path="/irunthis/:id" element={<ListingDetailsPage />} />
             <Route path="/irunthis/:id/edit" element={<EditListingpage />} />
 
-            <Route path="/imneworforgotmypassword" element={<AdminHome />} />
+            <Route path="/imneworforgotmypassword" element={<AdminHome/>} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </>
       ) : (
         <>
+          {/* <NavBar/> */}
           <NavBar />  
 
           <Routes>
             <Route path="/irunthis" element={<AuthPage setUser={setUser} />} />
             <Route path="/imneworforgotmypassword" element={<SignUpForm setUser={setUser} />} />
 
-            <Route path="/" element={<HomePage listings={listings} />} />
+            <Route path="/" element={<HomePage/>} />
             <Route path="/about" element={<AboutUsPage />} />
             <Route path="/contact" element={<ContactUsPage />} />
             <Route
               path="/available/"
-              element={<AvailabilitiesPage listings={listings} />}
+              element={<AvailabilitiesPage/>}
             />
             <Route path="/available/:id" element={<ListingShowPage />} />
             <Route path="*" element={<ErrorPage />} />

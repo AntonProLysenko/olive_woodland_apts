@@ -9,10 +9,12 @@ import newKitchenImg2 from "../assets/apatrment/kitchen_new.png"
 import oldCloset from "../assets/apatrment/8.png"
 import oldLiving from "../assets/apatrment/living_old.png"
 import oldLiving2 from "../assets/apatrment/living_entry_old.png"
-import newLiving2 from "../assets/apatrment/living_new.png"
+import newLiving from "../assets/apatrment/living_new.png"
 import newLiving3 from "../assets/apatrment/Living_new3.png"
+import newLiving4 from "../assets/apatrment/new_living4.png"
 import oldBathroom from "../assets/apatrment/Bathroom_old.png"
 import newBedroom from "../assets/apatrment/Bedroom_new.png"
+import newBedroom2 from "../assets/apatrment/Bedroom_new2.png"
 import furnishedBedroom from "../assets/apatrment/bedroom_fur.JPG"
 import furnishedLiving from "../assets/apatrment/living_fur.JPG"
 
@@ -23,7 +25,7 @@ import oldKitchen from "../assets/apatrment/kitchen_old.png"
 import appliances from "../assets/apatrment/appliences.png"
 
 import outside from "../assets/outside.jpg"
-import outsideAir from "../assets/outside above.jpg"
+import outsideAir from "../assets/outside_above.jpg"
 
 export default function AboutUsinfo() {
       const [slide, setSlide] = useState(false);
@@ -252,7 +254,7 @@ No pets over 25 lbs.
                 className="gallery__item gallery__item--4"
               >
                 <img
-                  src={newLiving2}
+                  src={newLiving}
                   className="gallery__img"
                   alt="Living Room"
                 />
@@ -414,21 +416,28 @@ No pets over 25 lbs.
             data-aos-duration="1500"  src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FGreenForestApts%2Fvideos%2F537745906753895%2F&show_text=false&width=560&t=2" width="560" height="314" style={{border:"none", overflow: "hidden"}} scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>,
             furnishedLiving,
             furnishedBedroom,
+            newLiving,
+            newLiving3,
+            newLiving4,
+            newBedroom,
+            newBedroom2,
+
             newKitchenImg,
             newKitchenImg2,
-            oldCloset,
-            oldLiving,
             oldLiving2,
-            newLiving2,
-            newLiving3,
-            oldBathroom,
-            newBedroom,
-            floorPlan,
+            oldLiving, 
             oldBedroom2,
+            oldCloset,
+           
+            
+            
+            oldBathroom,
             oldKitchen,
             appliances,
-            outside,
+            floorPlan,
             outsideAir
+            // newBedroom,
+            // outside,
             // "https://i.imgur.com/ILzD0HZ.jpg", // kitchen
             // "https://i.imgur.com/QSntCVw.jpg", // kitchen
             // "https://i.imgur.com/R16jAox.jpg", //bathroom

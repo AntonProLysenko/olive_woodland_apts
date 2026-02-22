@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import art from '../assets/Art.png'
+import * as listingsAPI from "../utilities/listings-api";
 // import "animate.css";
 
 
@@ -8,8 +9,19 @@ import art from '../assets/Art.png'
 import Footer from "../components/Footer";
 import AboutUsinfo from "../components/AboutUsinfo";
 
-export default function HomePage({ listings }) {
+export default function HomePage() {
   const [isHovering, setIsHovering] = useState(false);
+
+  const [availableCount, setAvailableCount] = useState(null);
+
+  async function getAvailableCount(){
+    const count = await listingsAPI.getAvailableCount();
+    setAvailableCount(count.count);
+  }
+
+  useEffect(() => {
+    getAvailableCount()
+  },[])
 
   const handleMouseOver = () => {
     setIsHovering(true);
@@ -19,25 +31,25 @@ export default function HomePage({ listings }) {
     setIsHovering(false);
   };
 
+  
+
   const loaded = () => {
-    const availableListings = []; //finding available listings
+    // const availableListings = []; //finding available listings
 
-    listings.map((listing) => {
-      if (listing.available === true) {
-        return availableListings.push(listing);
-      }
-      return null
-    });
-
-
-
+    // listings.map((listing) => {
+    //   if (listing.available === true) {
+    //     return availableListings.push(listing);
+    //   }
+    //   return null
+    // });
     function MultipleAvailable() {
 
       return (
         <div className="add-container">
           <div className="ad infobox">
             <span>
-              We have {availableListings.length} available apartments
+              {/* We have {availableListings.length} available apartments */}
+              We have {availableCount} available apartments
               <br />
               <Link to="/available">
                 {" "}
@@ -87,7 +99,9 @@ export default function HomePage({ listings }) {
       return (
         <div className="add-container">
           <div className="ad infobox">
-            We have {availableListings.length} available apartment
+            {/* We have {availableListings.length} available apartment */}
+            We have {availableCount} available apartment
+            
             <br />
             <Link to="/available">
               <button className="btn-add standart-button-dark">See more</button>
@@ -118,9 +132,9 @@ export default function HomePage({ listings }) {
       );
     }
 
-    return availableListings.length === 1
+    return availableCount === 1
       ? SingleAvailable()
-      : availableListings.length === 0
+      : availableCount === 0
       ? noneAvailable()
       : MultipleAvailable();
   };
@@ -146,7 +160,7 @@ export default function HomePage({ listings }) {
   return (
     <>
       <div className="homepageContainer">
-        {listings ? loaded() : noneAvailable()}
+        {availableCount ? loaded() : noneAvailable()}
 
         <div
           className={isHovering ? "homePic-faded" : "homePic"}
@@ -167,8 +181,10 @@ export default function HomePage({ listings }) {
             <h1 className="title-main">Green Forest Apartments</h1>
             <br />
             <p>
-            Fully remodeled one-bedroom apartments in Dayton, OH with newly painted walls,
-            a remodeled bathroom and kitchen, luxury vinyl plank floors, and newer appliances that consist of a stove and fridge. 
+            {/* Fully remodeled one-bedroom apartments in Dayton, OH with newly painted walls,
+            a remodeled bathroom and kitchen, luxury vinyl plank floors, and newer appliances that consist of a stove and fridge.  */}
+
+            Enjoy fully remodeled one-bedroom apartments in Dayton with modern finishes, new appliances, and luxury vinyl plank flooring. A quiet community surrounded by green space — simple, clean, and comfortable living.
             </p>
 
             <Link to="/about">

@@ -10,12 +10,13 @@ import floorPlan from "../../assets/apatrment/floor_plan.png"
 
 
 
-export default function ListingDetailsPage({ listings }) {
+export default function ListingDetailsPage() {
   const [listing, setListing] = useState(); //getting all listings from db
 
   const [slide, setSlide] = useState(false); //for slide show
   const { id } = useParams();
   const navigation = useNavigate();
+  // const ignoreRef = useRef(false);
 
   const [display, setDisplay] = useState({
     isLoaded: false,
@@ -23,18 +24,20 @@ export default function ListingDetailsPage({ listings }) {
   });
 
   async function getListing() {
-    const listing = await listingsAPI.getById(id);
-    setListing(listing);
-    setDisplay({
-      ...display,
+    const recievedlisting = await listingsAPI.getById(id);
+    setListing(recievedlisting);
+    setDisplay(prev=>({
+      ...prev,
       isLoaded:true,
       message:""
-    })
+    }))
   }
 
+
   useEffect(() => {
+    // ignoreRef.current = false;
     getListing();
-  }, [setListing]);
+  }, []);
 
   const handleDelete = async (evt) => {
     // evt.preventdefault()
@@ -57,6 +60,10 @@ export default function ListingDetailsPage({ listings }) {
       
     } catch {}
   };
+
+  function handleEditClick() {
+    navigation(`/irunthis/${id}/edit`, { state: { listing } });
+  }
 
   function loaded() {
     let quals = listing.qualifications.split(".")
@@ -154,11 +161,15 @@ export default function ListingDetailsPage({ listings }) {
         </div>
 
         <div className="bottom-buttons">
-          <Link to={`/irunthis/${listing._id}/edit`}>
+          {/* <Link to={`/irunthis/${listing._id}/edit`}>
             <button className="create-btn">
             <i className="fa fa-pencil" aria-hidden="true"></i>
               &nbsp; Edit</button>
-          </Link>
+          </Link> */}
+           <button onClick={handleEditClick} className="create-btn"> <i className="fa fa-pencil" aria-hidden="true"></i>
+              &nbsp; Edit
+            </button>
+          
 
           <form>
             <button onClick={handleDelete} className="delete-btn">
