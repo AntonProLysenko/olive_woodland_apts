@@ -30,7 +30,6 @@ export default function EditListingpage (){
       
       const responcelisting  = location.state?.listing ?? await listingsAPI.getById(id);
       setListing(responcelisting);
-      console.log("Inside Get Listing And I got one")
       if (listing){
         setDisplay({
           ...display,
@@ -38,8 +37,6 @@ export default function EditListingpage (){
           message: ""
         });
       }
-
-      console.log("Shiiiiiit no data")
     }
 
     useEffect(() => {

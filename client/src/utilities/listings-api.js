@@ -32,7 +32,7 @@ export function create(listingData){
 }
 
 export function getById(id) {
-  console.log("Got this id passed", id)
+  console.log("Got this listing id passed", id)
   return sendRequest(`${BASE_URL}/${id}`,'GET');
 }
 

@@ -1943,3 +1943,45 @@ input:checked + .slider:before {
     min-width: 90%;
   }
 }
+
+
+
+@media (max-width: 768px) {
+  .listing-ad {
+    flex-direction: column;
+    align-items: stretch;
+    width: 90vw;
+    height: auto;
+    padding: 12px;
+    min-height: fit-content;
+  }
+
+  .listing-ad-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .listing-ad-img > img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .listing-title {
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    margin-top: 10px;
+  }
+
+  .listing-title > h3 {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  /* .stack-container{
+    width:85vw;
+    margin-left: 0;
+  } */
+}
