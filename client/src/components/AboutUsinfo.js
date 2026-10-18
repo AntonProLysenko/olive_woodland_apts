@@ -100,7 +100,7 @@ export default function AboutUsinfo() {
               </p>
 
               <p>
-              Must have a <strong>minimum</strong> gross monthly family <strong>income</strong> of $2100. Will need proof of income (and three months with the current employer).
+              Must have a <strong>minimum</strong> gross monthly family <strong>income</strong> of $2000. Will need proof of income (and three months with the current employer).
               </p>
 
               <p>
